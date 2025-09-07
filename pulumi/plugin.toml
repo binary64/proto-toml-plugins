@@ -8,22 +8,18 @@ git-url = "https://github.com/pulumi/pulumi"
 
 [platform.linux]
 download-file = "pulumi-v{version}-linux-{arch}.tar.gz"
-checksum-file = "pulumi-v{version}-linux-{arch}.tar.gz.sig"
 exe-path = "pulumi"
 
 [platform.macos]
 download-file = "pulumi-v{version}-darwin-{arch}.tar.gz"
-checksum-file = "pulumi-v{version}-darwin-{arch}.tar.gz.sig"
 exe-path = "pulumi"
 
 [platform.windows]
 download-file = "pulumi-v{version}-windows-{arch}.zip"
-checksum-file = "pulumi-v{version}-windows-{arch}.zip.sig"
 exe-path = "pulumi.exe"
 
 [install]
 download-url = "https://github.com/pulumi/pulumi/releases/download/v{version}/{download_file}"
-checksum-url = "https://github.com/pulumi/pulumi/releases/download/v{version}/{checksum_file}"
 
 [install.arch]
 aarch64 = "arm64"
