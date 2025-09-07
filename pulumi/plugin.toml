@@ -22,8 +22,8 @@ checksum-file = "pulumi-v{version}-windows-{arch}.zip.sig"
 exe-path = "pulumi.exe"
 
 [install]
-download-url = "https://github.com/pulumi/pulumi/releases/download/{download_file}"
-checksum-url = "https://github.com/pulumi/pulumi/releases/download/{checksum_file}"
+download-url = "https://github.com/pulumi/pulumi/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/pulumi/pulumi/releases/download/v{version}/{checksum_file}"
 
 [install.arch]
 aarch64 = "arm64"
