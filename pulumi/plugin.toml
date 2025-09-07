@@ -27,4 +27,4 @@ checksum-url = "https://github.com/pulumi/pulumi/releases/download/v{version}/{c
 
 [install.arch]
 aarch64 = "arm64"
-x86_64 = "amd64"
+x86_64 = "x64"
