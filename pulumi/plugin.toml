@@ -8,15 +8,15 @@ git-url = "https://github.com/pulumi/pulumi"
 
 [platform.linux]
 download-file = "pulumi-v{version}-linux-{arch}.tar.gz"
-exe-path = "pulumi"
+exe-path = "pulumi/pulumi"
 
 [platform.macos]
 download-file = "pulumi-v{version}-darwin-{arch}.tar.gz"
-exe-path = "pulumi"
+exe-path = "pulumi/pulumi"
 
 [platform.windows]
 download-file = "pulumi-v{version}-windows-{arch}.zip"
-exe-path = "pulumi.exe"
+exe-path = "pulumi/pulumi.exe"
 
 [install]
 download-url = "https://github.com/pulumi/pulumi/releases/download/v{version}/{download_file}"
