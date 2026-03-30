@@ -1,0 +1,28 @@
+name = "doctl"
+type = "cli"
+
+[platform.linux]
+download-file = "doctl-{version}-linux-{arch}.tar.gz"
+checksum-file = "doctl-{version}-checksums.sha256"
+
+[platform.macos]
+download-file = "doctl-{version}-darwin-{arch}.tar.gz"
+checksum-file = "doctl-{version}-checksums.sha256"
+
+[platform.windows]
+download-file = "doctl-{version}-windows-{arch}.zip"
+checksum-file = "doctl-{version}-checksums.sha256"
+
+[install]
+download-url = "https://github.com/digitalocean/doctl/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/digitalocean/doctl/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.doctl]
+primary = true
+
+[resolve]
+git-url = "https://github.com/digitalocean/doctl"

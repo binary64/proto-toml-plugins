@@ -1,0 +1,32 @@
+name = "rancher"
+type = "cli"
+
+[platform.linux]
+download-file = "rancher-linux-{arch}-v{version}.tar.gz"
+archive-prefix = "rancher-v{version}"
+checksum-file = "sha256sum.txt"
+
+[platform.macos]
+download-file = "rancher-darwin-{arch}-v{version}.tar.gz"
+archive-prefix = "rancher-v{version}"
+checksum-file = "sha256sum.txt"
+
+[platform.windows]
+download-file = "rancher-windows-{arch}-v{version}.zip"
+archive-prefix = "rancher-v{version}"
+checksum-file = "sha256sum.txt"
+
+[install]
+download-url = "https://github.com/rancher/cli/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/rancher/cli/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.rancher]
+exe-path = "rancher"
+primary = true
+
+[resolve]
+git-url = "https://github.com/rancher/cli"

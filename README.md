@@ -1,0 +1,53 @@
+# proto-toml-plugins
+
+A collection of [proto](https://moonrepo.dev/proto) TOML plugins for DevOps CLI tools.
+
+## Available Plugins
+
+| Tool | Description | Source |
+|------|-------------|--------|
+| [doctl](doctl/) | DigitalOcean CLI | [digitalocean/doctl](https://github.com/digitalocean/doctl) |
+| [hadolint](hadolint/) | Dockerfile linter | [hadolint/hadolint](https://github.com/hadolint/hadolint) |
+| [hcloud](hcloud/) | Hetzner Cloud CLI | [hetznercloud/cli](https://github.com/hetznercloud/cli) |
+| [kargo](kargo/) | Kargo GitOps promotion engine | [akuity/kargo](https://github.com/akuity/kargo) |
+| [longhornctl](longhornctl/) | Longhorn storage CLI | [longhorn/cli](https://github.com/longhorn/cli) |
+| [pulumi](pulumi/) | Pulumi IaC CLI | [pulumi/pulumi](https://github.com/pulumi/pulumi) |
+| [rancher](rancher/) | Rancher CLI | [rancher/cli](https://github.com/rancher/cli) |
+| [sops](sops/) | Mozilla SOPS secret encryption | [getsops/sops](https://github.com/getsops/sops) |
+| [yq](yq/) | YAML/JSON/XML processor | [mikefarah/yq](https://github.com/mikefarah/yq) |
+
+## Usage
+
+Add plugins to your `.prototools` file:
+
+```toml
+[plugins]
+hadolint = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/hadolint/plugin.toml"
+yq = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/yq/plugin.toml"
+sops = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/sops/plugin.toml"
+doctl = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/doctl/plugin.toml"
+rancher = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/rancher/plugin.toml"
+kargo = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/kargo/plugin.toml"
+hcloud = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/hcloud/plugin.toml"
+longhornctl = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/longhornctl/plugin.toml"
+```
+
+Then install a tool:
+
+```bash
+proto install hadolint
+proto install yq
+# etc.
+```
+
+Pin a version in `.prototools`:
+
+```toml
+[versions]
+hadolint = "2.14.0"
+yq = "4.52.5"
+```
+
+## Contributing
+
+Each plugin is a single `plugin.toml` following the [proto TOML plugin schema](https://moonrepo.dev/docs/proto/non-wasm-plugin). PRs welcome for new tools or fixes.
