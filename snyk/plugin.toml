@@ -1,0 +1,24 @@
+name = "snyk"
+type = "cli"
+
+[platform.linux]
+download-file = "snyk-linux"
+checksum-file = "snyk-linux.sha256"
+
+[platform.macos]
+download-file = "snyk-macos"
+checksum-file = "snyk-macos.sha256"
+
+[platform.windows]
+download-file = "snyk-win.exe"
+checksum-file = "snyk-win.exe.sha256"
+
+[install]
+download-url = "https://github.com/snyk/cli/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/snyk/cli/releases/download/v{version}/{checksum_file}"
+
+[install.exes.snyk]
+primary = true
+
+[resolve]
+git-url = "https://github.com/snyk/cli"
