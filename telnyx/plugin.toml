@@ -1,0 +1,28 @@
+name = "telnyx"
+type = "cli"
+
+[platform.linux]
+download-file = "telnyx_{version}_linux_{arch}.tar.gz"
+checksum-file = "telnyx_{version}_checksums.txt"
+
+[platform.macos]
+download-file = "telnyx_{version}_macos_{arch}.zip"
+checksum-file = "telnyx_{version}_checksums.txt"
+
+[platform.windows]
+download-file = "telnyx_{version}_windows_{arch}.zip"
+checksum-file = "telnyx_{version}_checksums.txt"
+
+[install]
+download-url = "https://github.com/team-telnyx/telnyx-cli/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/team-telnyx/telnyx-cli/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.telnyx]
+primary = true
+
+[resolve]
+git-url = "https://github.com/team-telnyx/telnyx-cli"
