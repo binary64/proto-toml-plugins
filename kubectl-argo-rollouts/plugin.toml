@@ -1,0 +1,28 @@
+name = "kubectl-argo-rollouts"
+type = "cli"
+
+[platform.linux]
+download-file = "kubectl-argo-rollouts-linux-{arch}"
+checksum-file = "argo-rollouts-checksums.txt"
+
+[platform.macos]
+download-file = "kubectl-argo-rollouts-darwin-{arch}"
+checksum-file = "argo-rollouts-checksums.txt"
+
+[platform.windows]
+download-file = "kubectl-argo-rollouts-windows-{arch}"
+checksum-file = "argo-rollouts-checksums.txt"
+
+[install]
+download-url = "https://github.com/argoproj/argo-rollouts/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/argoproj/argo-rollouts/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.kubectl-argo-rollouts]
+primary = true
+
+[resolve]
+git-url = "https://github.com/argoproj/argo-rollouts"

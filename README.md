@@ -6,10 +6,15 @@ A collection of [proto](https://moonrepo.dev/proto) TOML plugins for DevOps CLI 
 
 | Tool | Description | Source |
 |------|-------------|--------|
+| [argocd](argocd/) | Argo CD CLI | [argoproj/argo-cd](https://github.com/argoproj/argo-cd) |
+| [argocd-image-updater](argocd-image-updater/) | ArgoCD Image Updater CLI | [argoproj-labs/argocd-image-updater](https://github.com/argoproj-labs/argocd-image-updater) |
 | [doctl](doctl/) | DigitalOcean CLI | [digitalocean/doctl](https://github.com/digitalocean/doctl) |
 | [hadolint](hadolint/) | Dockerfile linter | [hadolint/hadolint](https://github.com/hadolint/hadolint) |
+| [harbor](harbor/) | Harbor registry CLI | [goharbor/harbor-cli](https://github.com/goharbor/harbor-cli) |
 | [hcloud](hcloud/) | Hetzner Cloud CLI | [hetznercloud/cli](https://github.com/hetznercloud/cli) |
+| [just](just/) | Just command runner | [casey/just](https://github.com/casey/just) |
 | [kargo](kargo/) | Kargo GitOps promotion engine | [akuity/kargo](https://github.com/akuity/kargo) |
+| [kubectl-argo-rollouts](kubectl-argo-rollouts/) | Argo Rollouts kubectl plugin | [argoproj/argo-rollouts](https://github.com/argoproj/argo-rollouts) |
 | [longhornctl](longhornctl/) | Longhorn storage CLI | [longhorn/cli](https://github.com/longhorn/cli) |
 | [pulumi](pulumi/) | Pulumi IaC CLI | [pulumi/pulumi](https://github.com/pulumi/pulumi) |
 | [rancher](rancher/) | Rancher CLI | [rancher/cli](https://github.com/rancher/cli) |
