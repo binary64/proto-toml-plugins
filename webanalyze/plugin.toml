@@ -1,0 +1,28 @@
+name = "webanalyze"
+type = "cli"
+
+[platform.linux]
+download-file = "webanalyze_Linux_{arch}.tar.gz"
+checksum-file = "webanalyze_{version}_checksums.txt"
+
+[platform.macos]
+download-file = "webanalyze_Darwin_{arch}.tar.gz"
+checksum-file = "webanalyze_{version}_checksums.txt"
+
+[platform.windows]
+download-file = "webanalyze_Windows_{arch}.zip"
+checksum-file = "webanalyze_{version}_checksums.txt"
+
+[install]
+download-url = "https://github.com/rverton/webanalyze/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/rverton/webanalyze/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[install.exes.webanalyze]
+primary = true
+
+[resolve]
+git-url = "https://github.com/rverton/webanalyze"

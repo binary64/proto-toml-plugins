@@ -1,0 +1,28 @@
+name = "gobuster"
+type = "cli"
+
+[platform.linux]
+download-file = "gobuster_Linux_{arch}.tar.gz"
+checksum-file = "gobuster_{version}_checksums.txt"
+
+[platform.macos]
+download-file = "gobuster_Darwin_{arch}.tar.gz"
+checksum-file = "gobuster_{version}_checksums.txt"
+
+[platform.windows]
+download-file = "gobuster_Windows_{arch}.zip"
+checksum-file = "gobuster_{version}_checksums.txt"
+
+[install]
+download-url = "https://github.com/OJ/gobuster/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/OJ/gobuster/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[install.exes.gobuster]
+primary = true
+
+[resolve]
+git-url = "https://github.com/OJ/gobuster"

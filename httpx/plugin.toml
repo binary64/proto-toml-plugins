@@ -1,0 +1,28 @@
+name = "httpx"
+type = "cli"
+
+[platform.linux]
+download-file = "httpx_{version}_linux_{arch}.zip"
+checksum-file = "httpx_{version}_checksums.txt"
+
+[platform.macos]
+download-file = "httpx_{version}_macOS_{arch}.zip"
+checksum-file = "httpx_{version}_checksums.txt"
+
+[platform.windows]
+download-file = "httpx_{version}_windows_{arch}.zip"
+checksum-file = "httpx_{version}_checksums.txt"
+
+[install]
+download-url = "https://github.com/projectdiscovery/httpx/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/projectdiscovery/httpx/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.httpx]
+primary = true
+
+[resolve]
+git-url = "https://github.com/projectdiscovery/httpx"

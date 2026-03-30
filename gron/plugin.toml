@@ -1,0 +1,24 @@
+name = "gron"
+type = "cli"
+
+[platform.linux]
+download-file = "gron-linux-{arch}-{version}.tgz"
+
+[platform.macos]
+download-file = "gron-darwin-{arch}-{version}.tgz"
+
+[platform.windows]
+download-file = "gron-windows-{arch}-{version}.zip"
+
+[install]
+download-url = "https://github.com/tomnomnom/gron/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.gron]
+primary = true
+
+[resolve]
+git-url = "https://github.com/tomnomnom/gron"

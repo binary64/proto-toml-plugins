@@ -1,0 +1,28 @@
+name = "subfinder"
+type = "cli"
+
+[platform.linux]
+download-file = "subfinder_{version}_linux_{arch}.zip"
+checksum-file = "subfinder_{version}_checksums.txt"
+
+[platform.macos]
+download-file = "subfinder_{version}_macOS_{arch}.zip"
+checksum-file = "subfinder_{version}_checksums.txt"
+
+[platform.windows]
+download-file = "subfinder_{version}_windows_{arch}.zip"
+checksum-file = "subfinder_{version}_checksums.txt"
+
+[install]
+download-url = "https://github.com/projectdiscovery/subfinder/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/projectdiscovery/subfinder/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.subfinder]
+primary = true
+
+[resolve]
+git-url = "https://github.com/projectdiscovery/subfinder"
