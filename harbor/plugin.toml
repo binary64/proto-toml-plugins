@@ -3,25 +3,22 @@ type = "cli"
 
 [platform.linux]
 download-file = "harbor-cli_{version}_linux_{arch}.tar.gz"
-checksum-file = "checksums.txt"
 
 [platform.macos]
 download-file = "harbor-cli_{version}_darwin_{arch}.tar.gz"
-checksum-file = "checksums.txt"
 
 [platform.windows]
 download-file = "harbor-cli_{version}_windows_{arch}.zip"
-checksum-file = "checksums.txt"
 
 [install]
 download-url = "https://github.com/goharbor/harbor-cli/releases/download/v{version}/{download_file}"
-checksum-url = "https://github.com/goharbor/harbor-cli/releases/download/v{version}/{checksum_file}"
 
 [install.arch]
 aarch64 = "arm64"
 x86_64 = "amd64"
 
-[install.exes.harbor-cli]
+[install.exes.harbor]
+exe-path = "harbor-cli"
 primary = true
 
 [resolve]
