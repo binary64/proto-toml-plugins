@@ -1,0 +1,21 @@
+name = "vt-cli"
+type = "cli"
+
+[platform.linux]
+download-file = "Linux64.zip"
+
+[platform.macos]
+download-file = "MacOSX.zip"
+
+[platform.windows]
+download-file = "Windows64.zip"
+
+[install]
+download-url = "https://github.com/VirusTotal/vt-cli/releases/download/{version}/{download_file}"
+
+[install.exes.vt]
+primary = true
+
+[resolve]
+git-url = "https://github.com/VirusTotal/vt-cli"
+version-pattern = "^[0-9]"

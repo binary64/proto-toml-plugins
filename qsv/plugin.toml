@@ -1,0 +1,29 @@
+name = "qsv"
+type = "cli"
+
+[platform.linux]
+download-file = "qsv-{version}-{arch}-unknown-linux-gnu.zip"
+
+[platform.macos]
+download-file = "qsv-{version}-{arch}-apple-darwin.zip"
+
+[platform.windows]
+download-file = "qsv-{version}-{arch}-pc-windows-msvc.zip"
+
+[install]
+download-url = "https://github.com/jqnatividad/qsv/releases/download/{version}/{download_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.qsv]
+primary = true
+
+[install.exes.qsvlite]
+
+[install.exes.qsvdp]
+
+[resolve]
+git-url = "https://github.com/jqnatividad/qsv"
+version-pattern = "^[0-9]"
