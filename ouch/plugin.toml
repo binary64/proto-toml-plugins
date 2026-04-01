@@ -1,0 +1,28 @@
+name = "ouch"
+type = "cli"
+
+[platform.linux]
+download-file = "ouch-{arch}-unknown-linux-gnu.tar.gz"
+archive-prefix = "ouch-{arch}-unknown-linux-gnu"
+
+[platform.macos]
+download-file = "ouch-{arch}-apple-darwin.tar.gz"
+archive-prefix = "ouch-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "ouch-{arch}-pc-windows-msvc.zip"
+archive-prefix = "ouch-{arch}-pc-windows-msvc"
+
+[install]
+download-url = "https://github.com/ouch-org/ouch/releases/download/{version}/{download_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.ouch]
+primary = true
+
+[resolve]
+git-url = "https://github.com/ouch-org/ouch"
+version-pattern = "^[0-9]"

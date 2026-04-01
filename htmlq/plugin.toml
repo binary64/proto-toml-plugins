@@ -1,0 +1,20 @@
+name = "htmlq"
+type = "cli"
+
+[platform.linux]
+download-file = "htmlq-x86_64-linux.tar.gz"
+
+[platform.macos]
+download-file = "htmlq-x86_64-darwin.tar.gz"
+
+[platform.windows]
+download-file = "htmlq-x86_64-windows.zip"
+
+[install]
+download-url = "https://github.com/mgdm/htmlq/releases/download/v{version}/{download_file}"
+
+[install.exes.htmlq]
+primary = true
+
+[resolve]
+git-url = "https://github.com/mgdm/htmlq"

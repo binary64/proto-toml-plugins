@@ -1,0 +1,30 @@
+name = "git-cliff"
+type = "cli"
+
+[platform.linux]
+download-file = "git-cliff-{version}-{arch}-unknown-linux-gnu.tar.gz"
+checksum-file = "git-cliff-{version}-{arch}-unknown-linux-gnu.tar.gz.sha512"
+archive-prefix = "git-cliff-{version}"
+
+[platform.macos]
+download-file = "git-cliff-{version}-{arch}-apple-darwin.tar.gz"
+checksum-file = "git-cliff-{version}-{arch}-apple-darwin.tar.gz.sha512"
+archive-prefix = "git-cliff-{version}"
+
+[platform.windows]
+download-file = "git-cliff-{version}-{arch}-pc-windows-msvc.zip"
+archive-prefix = "git-cliff-{version}"
+
+[install]
+download-url = "https://github.com/orhun/git-cliff/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/orhun/git-cliff/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.git-cliff]
+primary = true
+
+[resolve]
+git-url = "https://github.com/orhun/git-cliff"

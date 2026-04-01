@@ -1,0 +1,28 @@
+name = "git-delta"
+type = "cli"
+
+[platform.linux]
+download-file = "delta-{version}-{arch}-unknown-linux-gnu.tar.gz"
+archive-prefix = "delta-{version}-{arch}-unknown-linux-gnu"
+
+[platform.macos]
+download-file = "delta-{version}-{arch}-apple-darwin.tar.gz"
+archive-prefix = "delta-{version}-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "delta-{version}-{arch}-pc-windows-msvc.zip"
+archive-prefix = "delta-{version}-{arch}-pc-windows-msvc"
+
+[install]
+download-url = "https://github.com/dandavison/delta/releases/download/{version}/{download_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.delta]
+primary = true
+
+[resolve]
+git-url = "https://github.com/dandavison/delta"
+version-pattern = "^[0-9]"

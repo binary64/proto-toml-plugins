@@ -1,0 +1,27 @@
+name = "sd"
+type = "cli"
+
+[platform.linux]
+download-file = "sd-v{version}-{arch}-unknown-linux-gnu.tar.gz"
+archive-prefix = "sd-v{version}-{arch}-unknown-linux-gnu"
+
+[platform.macos]
+download-file = "sd-v{version}-{arch}-apple-darwin.tar.gz"
+archive-prefix = "sd-v{version}-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "sd-v{version}-{arch}-pc-windows-msvc.zip"
+archive-prefix = "sd-v{version}-{arch}-pc-windows-msvc"
+
+[install]
+download-url = "https://github.com/chmln/sd/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.sd]
+primary = true
+
+[resolve]
+git-url = "https://github.com/chmln/sd"

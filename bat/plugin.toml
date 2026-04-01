@@ -1,0 +1,27 @@
+name = "bat"
+type = "cli"
+
+[platform.linux]
+download-file = "bat-v{version}-{arch}-unknown-linux-gnu.tar.gz"
+archive-prefix = "bat-v{version}-{arch}-unknown-linux-gnu"
+
+[platform.macos]
+download-file = "bat-v{version}-{arch}-apple-darwin.tar.gz"
+archive-prefix = "bat-v{version}-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "bat-v{version}-{arch}-pc-windows-msvc.zip"
+archive-prefix = "bat-v{version}-{arch}-pc-windows-msvc"
+
+[install]
+download-url = "https://github.com/sharkdp/bat/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.bat]
+primary = true
+
+[resolve]
+git-url = "https://github.com/sharkdp/bat"

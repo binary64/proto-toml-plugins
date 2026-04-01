@@ -1,0 +1,32 @@
+name = "ripgrep"
+type = "cli"
+
+[platform.linux]
+download-file = "ripgrep-{version}-{arch}-unknown-linux-musl.tar.gz"
+checksum-file = "ripgrep-{version}-{arch}-unknown-linux-musl.tar.gz.sha256"
+archive-prefix = "ripgrep-{version}-{arch}-unknown-linux-musl"
+
+[platform.macos]
+download-file = "ripgrep-{version}-{arch}-apple-darwin.tar.gz"
+checksum-file = "ripgrep-{version}-{arch}-apple-darwin.tar.gz.sha256"
+archive-prefix = "ripgrep-{version}-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "ripgrep-{version}-{arch}-pc-windows-msvc.zip"
+checksum-file = "ripgrep-{version}-{arch}-pc-windows-msvc.zip.sha256"
+archive-prefix = "ripgrep-{version}-{arch}-pc-windows-msvc"
+
+[install]
+download-url = "https://github.com/BurntSushi/ripgrep/releases/download/{version}/{download_file}"
+checksum-url = "https://github.com/BurntSushi/ripgrep/releases/download/{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.rg]
+primary = true
+
+[resolve]
+git-url = "https://github.com/BurntSushi/ripgrep"
+version-pattern = "^[0-9]"
