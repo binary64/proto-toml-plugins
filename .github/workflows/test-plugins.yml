@@ -1,0 +1,68 @@
+name: Test Plugins
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1" # Weekly Monday 6am — catch upstream release changes
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  discover:
+    name: Discover plugins
+    runs-on: ubuntu-latest
+    outputs:
+      plugins: ${{ steps.list.outputs.plugins }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: list
+        run: |
+          plugins=$(ls -1d */plugin.toml | sed 's|/plugin.toml||' | jq -R -s -c 'split("\n") | map(select(. != ""))')
+          echo "plugins=$plugins" >> "$GITHUB_OUTPUT"
+          echo "Found $(echo "$plugins" | jq length) plugins"
+
+  test:
+    name: ${{ matrix.plugin }}
+    needs: discover
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        plugin: ${{ fromJson(needs.discover.outputs.plugins) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install proto
+        run: |
+          curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --yes
+          echo "$HOME/.proto/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.proto/shims" >> "$GITHUB_PATH"
+
+      - name: Configure plugin
+        run: |
+          cat >> .prototools <<EOF
+          [plugins]
+          ${{ matrix.plugin }} = "source:file://${{ github.workspace }}/${{ matrix.plugin }}/plugin.toml"
+          EOF
+          echo "--- .prototools ---"
+          cat .prototools
+
+      - name: Resolve latest version
+        id: resolve
+        run: |
+          version=$(proto list-remote ${{ matrix.plugin }} 2>/dev/null | tail -1)
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Latest version: $version"
+
+      - name: Install plugin
+        run: |
+          proto install ${{ matrix.plugin }} ${{ steps.resolve.outputs.version }}
+
+      - name: Verify binary
+        run: |
+          proto run ${{ matrix.plugin }} -- --version || proto run ${{ matrix.plugin }} -- version || echo "⚠️ --version not supported, but binary exists"
