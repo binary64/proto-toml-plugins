@@ -1,0 +1,27 @@
+name = "crane"
+type = "cli"
+
+[platform.linux]
+download-file = "go-containerregistry_Linux_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.macos]
+download-file = "go-containerregistry_Darwin_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.windows]
+download-file = "go-containerregistry_Windows_{arch}.tar.gz"
+archive-prefix = ""
+
+[install]
+download-url = "https://github.com/google/go-containerregistry/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[install.exes.crane]
+primary = true
+
+[resolve]
+git-url = "https://github.com/google/go-containerregistry"

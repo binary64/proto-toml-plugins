@@ -1,0 +1,24 @@
+name = "hey"
+type = "cli"
+
+[platform.linux]
+download-file = "hey_linux_{arch}"
+
+[platform.macos]
+download-file = "hey_darwin_{arch}"
+
+[platform.windows]
+download-file = "hey_windows_{arch}"
+
+[install]
+download-url = "https://storage.googleapis.com/hey-releases/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.hey]
+primary = true
+
+[resolve]
+git-url = "https://github.com/rakyll/hey"

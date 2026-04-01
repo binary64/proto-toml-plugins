@@ -1,0 +1,27 @@
+name = "grpcurl"
+type = "cli"
+
+[platform.linux]
+download-file = "grpcurl_{version}_linux_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.macos]
+download-file = "grpcurl_{version}_osx_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.windows]
+download-file = "grpcurl_{version}_windows_{arch}.zip"
+archive-prefix = ""
+
+[install]
+download-url = "https://github.com/fullstorydev/grpcurl/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[install.exes.grpcurl]
+primary = true
+
+[resolve]
+git-url = "https://github.com/fullstorydev/grpcurl"

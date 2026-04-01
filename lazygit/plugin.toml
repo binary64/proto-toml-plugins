@@ -1,0 +1,27 @@
+name = "lazygit"
+type = "cli"
+
+[platform.linux]
+download-file = "lazygit_{version}_linux_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.macos]
+download-file = "lazygit_{version}_darwin_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.windows]
+download-file = "lazygit_{version}_windows_{arch}.zip"
+archive-prefix = ""
+
+[install]
+download-url = "https://github.com/jesseduffield/lazygit/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[install.exes.lazygit]
+primary = true
+
+[resolve]
+git-url = "https://github.com/jesseduffield/lazygit"

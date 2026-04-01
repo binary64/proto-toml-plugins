@@ -1,0 +1,27 @@
+name = "lazydocker"
+type = "cli"
+
+[platform.linux]
+download-file = "lazydocker_{version}_Linux_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.macos]
+download-file = "lazydocker_{version}_Darwin_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.windows]
+download-file = "lazydocker_{version}_Windows_{arch}.zip"
+archive-prefix = ""
+
+[install]
+download-url = "https://github.com/jesseduffield/lazydocker/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[install.exes.lazydocker]
+primary = true
+
+[resolve]
+git-url = "https://github.com/jesseduffield/lazydocker"

@@ -1,0 +1,24 @@
+name = "ctop"
+type = "cli"
+
+[platform.linux]
+download-file = "ctop-{version}-linux-{arch}"
+
+[platform.macos]
+download-file = "ctop-{version}-darwin-{arch}"
+
+[platform.windows]
+download-file = "ctop-{version}-windows-{arch}"
+
+[install]
+download-url = "https://github.com/bcicen/ctop/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.ctop]
+primary = true
+
+[resolve]
+git-url = "https://github.com/bcicen/ctop"

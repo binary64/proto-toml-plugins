@@ -1,0 +1,27 @@
+name = "glow"
+type = "cli"
+
+[platform.linux]
+download-file = "glow_{version}_Linux_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.macos]
+download-file = "glow_{version}_Darwin_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.windows]
+download-file = "glow_{version}_Windows_{arch}.zip"
+archive-prefix = ""
+
+[install]
+download-url = "https://github.com/charmbracelet/glow/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[install.exes.glow]
+primary = true
+
+[resolve]
+git-url = "https://github.com/charmbracelet/glow"

@@ -1,0 +1,27 @@
+name = "vhs"
+type = "cli"
+
+[platform.linux]
+download-file = "vhs_{version}_Linux_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.macos]
+download-file = "vhs_{version}_Darwin_{arch}.tar.gz"
+archive-prefix = ""
+
+[platform.windows]
+download-file = "vhs_{version}_Windows_{arch}.zip"
+archive-prefix = ""
+
+[install]
+download-url = "https://github.com/charmbracelet/vhs/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[install.exes.vhs]
+primary = true
+
+[resolve]
+git-url = "https://github.com/charmbracelet/vhs"

@@ -1,0 +1,27 @@
+name = "usql"
+type = "cli"
+
+[platform.linux]
+download-file = "usql-{version}-linux-{arch}.tar.bz2"
+archive-prefix = ""
+
+[platform.macos]
+download-file = "usql-{version}-darwin-{arch}.tar.bz2"
+archive-prefix = ""
+
+[platform.windows]
+download-file = "usql-{version}-windows-{arch}.zip"
+archive-prefix = ""
+
+[install]
+download-url = "https://github.com/xo/usql/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.usql]
+primary = true
+
+[resolve]
+git-url = "https://github.com/xo/usql"
