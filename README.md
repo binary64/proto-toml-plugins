@@ -1,52 +1,83 @@
 # proto-toml-plugins
 
-A collection of [proto](https://moonrepo.dev/proto) TOML plugins for DevOps CLI tools.
+A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
+
+**71 plugins** and counting.
 
 ## Available Plugins
 
 | Tool | Description | Source |
 |------|-------------|--------|
 | [argocd](argocd/) | Argo CD CLI | [argoproj/argo-cd](https://github.com/argoproj/argo-cd) |
-| [crane](crane/) | Container image tool | [google/go-containerregistry](https://github.com/google/go-containerregistry) |
-| [ctop](ctop/) | Container metrics & monitoring | [bcicen/ctop](https://github.com/bcicen/ctop) |
-| [dasel](dasel/) | Query & modify data structures | [TomWright/dasel](https://github.com/TomWright/dasel) |
-| [dive](dive/) | Docker image layer explorer | [wagoodman/dive](https://github.com/wagoodman/dive) |
 | [argocd-image-updater](argocd-image-updater/) | ArgoCD Image Updater CLI | [argoproj-labs/argocd-image-updater](https://github.com/argoproj-labs/argocd-image-updater) |
-| [cntb](cntb/) | Contabo CLI | [contabo/cntb](https://github.com/contabo/cntb) |
+| [ast-grep](ast-grep/) | Structural code search & rewrite | [ast-grep/ast-grep](https://github.com/ast-grep/ast-grep) |
+| [bandwhich](bandwhich/) | Terminal bandwidth utilization monitor | [imsnif/bandwhich](https://github.com/imsnif/bandwhich) |
+| [bat](bat/) | cat clone with syntax highlighting | [sharkdp/bat](https://github.com/sharkdp/bat) |
+| [bitwarden-cli](bitwarden-cli/) | Bitwarden password manager CLI | [bitwarden/cli](https://github.com/bitwarden/cli) |
+| [bottom](bottom/) | Graphical process/system monitor (btm) | [ClementTsang/bottom](https://github.com/ClementTsang/bottom) |
+| [cargo-machete](cargo-machete/) | Remove unused Rust dependencies | [bnjbvr/cargo-machete](https://github.com/bnjbvr/cargo-machete) |
+| [cargo-watch](cargo-watch/) | Watch Cargo projects for changes | [watchexec/cargo-watch](https://github.com/watchexec/cargo-watch) |
+| [choose](choose/) | Human-friendly cut alternative | [theryangeary/choose](https://github.com/theryangeary/choose) |
+| [cntb](cntb/) | Contabo cloud CLI | [contabo/cntb](https://github.com/contabo/cntb) |
+| [crane](crane/) | Container registry tool | [google/go-containerregistry](https://github.com/google/go-containerregistry) |
+| [ctop](ctop/) | Container metrics & monitoring | [bcicen/ctop](https://github.com/bcicen/ctop) |
+| [dasel](dasel/) | Query & modify data structures (JSON/YAML/TOML/XML) | [TomWright/dasel](https://github.com/TomWright/dasel) |
+| [difftastic](difftastic/) | Structural diff tool | [Wilfred/difftastic](https://github.com/Wilfred/difftastic) |
+| [dive](dive/) | Docker image layer explorer | [wagoodman/dive](https://github.com/wagoodman/dive) |
 | [doctl](doctl/) | DigitalOcean CLI | [digitalocean/doctl](https://github.com/digitalocean/doctl) |
+| [dust](dust/) | Intuitive disk usage (du alternative) | [bootandy/dust](https://github.com/bootandy/dust) |
+| [eza](eza/) | Modern ls replacement | [eza-community/eza](https://github.com/eza-community/eza) |
+| [fd](fd/) | Fast find alternative | [sharkdp/fd](https://github.com/sharkdp/fd) |
+| [feroxbuster](feroxbuster/) | Recursive content discovery tool | [epi052/feroxbuster](https://github.com/epi052/feroxbuster) |
 | [ffuf](ffuf/) | Fast web fuzzer | [ffuf/ffuf](https://github.com/ffuf/ffuf) |
-| [gobuster](gobuster/) | Directory/DNS/VHost brute-forcer | [OJ/gobuster](https://github.com/OJ/gobuster) |
+| [git-cliff](git-cliff/) | Changelog generator from git history | [orhun/git-cliff](https://github.com/orhun/git-cliff) |
+| [git-delta](git-delta/) | Syntax-highlighting pager for git diffs | [dandavison/delta](https://github.com/dandavison/delta) |
 | [glow](glow/) | Markdown renderer for the terminal | [charmbracelet/glow](https://github.com/charmbracelet/glow) |
+| [gobuster](gobuster/) | Directory/DNS/VHost brute-forcer | [OJ/gobuster](https://github.com/OJ/gobuster) |
+| [grex](grex/) | Regex generator from examples | [pemistahl/grex](https://github.com/pemistahl/grex) |
 | [gron](gron/) | Make JSON greppable | [tomnomnom/gron](https://github.com/tomnomnom/gron) |
 | [grpcurl](grpcurl/) | cURL for gRPC servers | [fullstorydev/grpcurl](https://github.com/fullstorydev/grpcurl) |
 | [gum](gum/) | Glamorous shell scripts | [charmbracelet/gum](https://github.com/charmbracelet/gum) |
 | [hadolint](hadolint/) | Dockerfile linter | [hadolint/hadolint](https://github.com/hadolint/hadolint) |
-| [hey](hey/) | HTTP load generator | [rakyll/hey](https://github.com/rakyll/hey) |
 | [harbor](harbor/) | Harbor registry CLI | [goharbor/harbor-cli](https://github.com/goharbor/harbor-cli) |
 | [hcloud](hcloud/) | Hetzner Cloud CLI | [hetznercloud/cli](https://github.com/hetznercloud/cli) |
+| [hey](hey/) | HTTP load generator | [rakyll/hey](https://github.com/rakyll/hey) |
+| [htmlq](htmlq/) | HTML selector (jq for HTML) | [mgdm/htmlq](https://github.com/mgdm/htmlq) |
 | [httpx](httpx/) | Fast HTTP prober | [projectdiscovery/httpx](https://github.com/projectdiscovery/httpx) |
 | [jcli](jcli/) | Jenkins CLI | [jenkins-zh/jenkins-cli](https://github.com/jenkins-zh/jenkins-cli) |
+| [just](just/) | Command runner (make alternative) | [casey/just](https://github.com/casey/just) |
+| [kargo](kargo/) | Kargo GitOps promotion engine CLI | [akuity/kargo](https://github.com/akuity/kargo) |
+| [kubectl-argo-rollouts](kubectl-argo-rollouts/) | Argo Rollouts kubectl plugin | [argoproj/argo-rollouts](https://github.com/argoproj/argo-rollouts) |
 | [lazydocker](lazydocker/) | Terminal UI for Docker | [jesseduffield/lazydocker](https://github.com/jesseduffield/lazydocker) |
 | [lazygit](lazygit/) | Terminal UI for git | [jesseduffield/lazygit](https://github.com/jesseduffield/lazygit) |
-| [just](just/) | Just command runner | [casey/just](https://github.com/casey/just) |
-| [kargo](kargo/) | Kargo GitOps promotion engine | [akuity/kargo](https://github.com/akuity/kargo) |
-| [kubectl-argo-rollouts](kubectl-argo-rollouts/) | Argo Rollouts kubectl plugin | [argoproj/argo-rollouts](https://github.com/argoproj/argo-rollouts) |
 | [longhornctl](longhornctl/) | Longhorn storage CLI | [longhorn/cli](https://github.com/longhorn/cli) |
+| [miniserve](miniserve/) | Small self-contained HTTP file server | [svenstaro/miniserve](https://github.com/svenstaro/miniserve) |
 | [mkcert](mkcert/) | Locally trusted dev certificates | [FiloSottile/mkcert](https://github.com/FiloSottile/mkcert) |
 | [newrelic](newrelic/) | New Relic CLI | [newrelic/newrelic-cli](https://github.com/newrelic/newrelic-cli) |
 | [nuclei](nuclei/) | Vulnerability scanner | [projectdiscovery/nuclei](https://github.com/projectdiscovery/nuclei) |
+| [ouch](ouch/) | Compress/decompress files (any format) | [ouch-org/ouch](https://github.com/ouch-org/ouch) |
+| [pastel](pastel/) | Color manipulation in the terminal | [sharkdp/pastel](https://github.com/sharkdp/pastel) |
+| [procs](procs/) | Modern ps replacement | [dalance/procs](https://github.com/dalance/procs) |
 | [pulumi](pulumi/) | Pulumi IaC CLI | [pulumi/pulumi](https://github.com/pulumi/pulumi) |
+| [qsv](qsv/) | Ultra-fast CSV toolkit | [jqnatividad/qsv](https://github.com/jqnatividad/qsv) |
 | [rancher](rancher/) | Rancher CLI | [rancher/cli](https://github.com/rancher/cli) |
+| [ripgrep](ripgrep/) | Fast recursive grep (rg) | [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) |
+| [ripgrep-all](ripgrep-all/) | ripgrep over PDFs, archives, and more | [phiresky/ripgrep-all](https://github.com/phiresky/ripgrep-all) |
+| [sd](sd/) | Intuitive find & replace (sed alternative) | [chmln/sd](https://github.com/chmln/sd) |
 | [sentry-cli](sentry-cli/) | Sentry error tracking CLI | [getsentry/sentry-cli](https://github.com/getsentry/sentry-cli) |
 | [shfmt](shfmt/) | Shell script formatter | [mvdan/sh](https://github.com/mvdan/sh) |
+| [snyk](snyk/) | Security & vulnerability scanner | [snyk/cli](https://github.com/snyk/cli) |
 | [sops](sops/) | Mozilla SOPS secret encryption | [getsops/sops](https://github.com/getsops/sops) |
-| [syft](syft/) | SBOM generator for containers | [anchore/syft](https://github.com/anchore/syft) |
-| [subfinder](subfinder/) | Subdomain discovery | [projectdiscovery/subfinder](https://github.com/projectdiscovery/subfinder) |
+| [subfinder](subfinder/) | Subdomain discovery tool | [projectdiscovery/subfinder](https://github.com/projectdiscovery/subfinder) |
+| [syft](syft/) | SBOM generator for containers & filesystems | [anchore/syft](https://github.com/anchore/syft) |
 | [telnyx](telnyx/) | Telnyx telecom CLI | [team-telnyx/telnyx-cli](https://github.com/team-telnyx/telnyx-cli) |
-| [usql](usql/) | Universal SQL CLI | [xo/usql](https://github.com/xo/usql) |
+| [ubi](ubi/) | Universal binary installer | [houseabsolute/ubi](https://github.com/houseabsolute/ubi) |
+| [usql](usql/) | Universal SQL CLI for any database | [xo/usql](https://github.com/xo/usql) |
 | [vhs](vhs/) | Terminal GIF recorder | [charmbracelet/vhs](https://github.com/charmbracelet/vhs) |
+| [vt-cli](vt-cli/) | VirusTotal CLI | [VirusTotal/vt-cli](https://github.com/VirusTotal/vt-cli) |
 | [vultr-cli](vultr-cli/) | Vultr cloud CLI | [vultr/vultr-cli](https://github.com/vultr/vultr-cli) |
 | [webanalyze](webanalyze/) | Website tech stack detection | [rverton/webanalyze](https://github.com/rverton/webanalyze) |
+| [xh](xh/) | Friendly HTTP client (httpie alternative) | [ducaale/xh](https://github.com/ducaale/xh) |
 | [yq](yq/) | YAML/JSON/XML processor | [mikefarah/yq](https://github.com/mikefarah/yq) |
 
 ## Usage
@@ -55,32 +86,29 @@ Add plugins to your `.prototools` file:
 
 ```toml
 [plugins]
-hadolint = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/hadolint/plugin.toml"
+lazygit = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/lazygit/plugin.toml"
+dive = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/dive/plugin.toml"
+bat = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/bat/plugin.toml"
 yq = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/yq/plugin.toml"
 sops = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/sops/plugin.toml"
-doctl = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/doctl/plugin.toml"
-rancher = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/rancher/plugin.toml"
-kargo = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/kargo/plugin.toml"
-hcloud = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/hcloud/plugin.toml"
-longhornctl = "source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/longhornctl/plugin.toml"
 ```
 
-Then install a tool:
+Then install:
 
 ```bash
-proto install hadolint
-proto install yq
-# etc.
+proto install lazygit
+proto install dive
 ```
 
 Pin a version in `.prototools`:
 
 ```toml
 [versions]
-hadolint = "2.14.0"
+lazygit = "0.44.1"
 yq = "4.52.5"
 ```
 
 ## Contributing
 
 Each plugin is a single `plugin.toml` following the [proto TOML plugin schema](https://moonrepo.dev/docs/proto/non-wasm-plugin). PRs welcome for new tools or fixes.
+
