@@ -1,0 +1,25 @@
+name = "bottom"
+type = "cli"
+
+[platform.linux]
+download-file = "bottom_{arch}-unknown-linux-gnu.tar.gz"
+
+[platform.macos]
+download-file = "bottom_{arch}-apple-darwin.tar.gz"
+
+[platform.windows]
+download-file = "bottom_{arch}-pc-windows-msvc.zip"
+
+[install]
+download-url = "https://github.com/ClementTsang/bottom/releases/download/{version}/{download_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.btm]
+primary = true
+
+[resolve]
+git-url = "https://github.com/ClementTsang/bottom"
+version-pattern = "^[0-9]"

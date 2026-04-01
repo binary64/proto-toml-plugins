@@ -1,0 +1,21 @@
+name = "eza"
+type = "cli"
+
+[platform.linux]
+download-file = "eza_{arch}-unknown-linux-gnu.tar.gz"
+
+[platform.windows]
+download-file = "eza.exe_{arch}-pc-windows-gnu.zip"
+
+[install]
+download-url = "https://github.com/eza-community/eza/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.eza]
+primary = true
+
+[resolve]
+git-url = "https://github.com/eza-community/eza"

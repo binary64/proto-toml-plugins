@@ -1,0 +1,27 @@
+name = "pastel"
+type = "cli"
+
+[platform.linux]
+download-file = "pastel-v{version}-{arch}-unknown-linux-gnu.tar.gz"
+archive-prefix = "pastel-v{version}-{arch}-unknown-linux-gnu"
+
+[platform.macos]
+download-file = "pastel-v{version}-{arch}-apple-darwin.tar.gz"
+archive-prefix = "pastel-v{version}-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "pastel-v{version}-{arch}-pc-windows-msvc.zip"
+archive-prefix = "pastel-v{version}-{arch}-pc-windows-msvc"
+
+[install]
+download-url = "https://github.com/sharkdp/pastel/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.pastel]
+primary = true
+
+[resolve]
+git-url = "https://github.com/sharkdp/pastel"

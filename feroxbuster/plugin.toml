@@ -1,0 +1,24 @@
+name = "feroxbuster"
+type = "cli"
+
+[platform.linux]
+download-file = "{arch}-linux-feroxbuster.tar.gz"
+
+[platform.macos]
+download-file = "{arch}-macos-feroxbuster.tar.gz"
+
+[platform.windows]
+download-file = "{arch}-windows-feroxbuster.exe.zip"
+
+[install]
+download-url = "https://github.com/epi052/feroxbuster/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.feroxbuster]
+primary = true
+
+[resolve]
+git-url = "https://github.com/epi052/feroxbuster"

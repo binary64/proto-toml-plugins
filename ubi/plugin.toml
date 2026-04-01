@@ -1,0 +1,28 @@
+name = "ubi"
+type = "cli"
+
+[platform.linux]
+download-file = "ubi-Linux-musl-{arch}.tar.gz"
+checksum-file = "ubi-Linux-musl-{arch}.tar.gz.sha256"
+
+[platform.macos]
+download-file = "ubi-macOS-{arch}.tar.gz"
+checksum-file = "ubi-macOS-{arch}.tar.gz.sha256"
+
+[platform.windows]
+download-file = "ubi-Windows-msvc-{arch}.zip"
+checksum-file = "ubi-Windows-msvc-{arch}.zip.sha256"
+
+[install]
+download-url = "https://github.com/houseabsolute/ubi/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/houseabsolute/ubi/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[install.exes.ubi]
+primary = true
+
+[resolve]
+git-url = "https://github.com/houseabsolute/ubi"

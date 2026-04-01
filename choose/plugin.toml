@@ -1,0 +1,24 @@
+name = "choose"
+type = "cli"
+
+[platform.linux]
+download-file = "choose-{arch}-unknown-linux-gnu"
+
+[platform.macos]
+download-file = "choose-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "choose-{arch}-pc-windows-gnu.exe"
+
+[install]
+download-url = "https://github.com/theryangeary/choose/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "aarch64"
+x86_64 = "x86_64"
+
+[install.exes.choose]
+primary = true
+
+[resolve]
+git-url = "https://github.com/theryangeary/choose"
