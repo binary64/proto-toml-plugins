@@ -24,4 +24,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/ast-grep/ast-grep"
-version-pattern = "^[0-9]"
+version-pattern = "^(\\d+\\..*)"

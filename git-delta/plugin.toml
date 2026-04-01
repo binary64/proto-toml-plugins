@@ -25,4 +25,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/dandavison/delta"
-version-pattern = "^[0-9]"
+version-pattern = "^(\\d+\\..*)"

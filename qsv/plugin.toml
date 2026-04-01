@@ -26,4 +26,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/jqnatividad/qsv"
-version-pattern = "^[0-9]"
+version-pattern = "^(\\d+\\..*)"

@@ -3,19 +3,15 @@ type = "cli"
 
 [platform.linux]
 download-file = "bw-linux-{version}.zip"
-checksum-file = "bw-linux-sha256-{version}.txt"
 
 [platform.macos]
 download-file = "bw-macos-{version}.zip"
-checksum-file = "bw-macos-sha256-{version}.txt"
 
 [platform.windows]
 download-file = "bw-windows-{version}.zip"
-checksum-file = "bw-windows-sha256-{version}.txt"
 
 [install]
 download-url = "https://github.com/bitwarden/cli/releases/download/v{version}/{download_file}"
-checksum-url = "https://github.com/bitwarden/cli/releases/download/v{version}/{checksum_file}"
 
 [install.exes.bw]
 primary = true

@@ -29,4 +29,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/BurntSushi/ripgrep"
-version-pattern = "^[0-9]"
+version-pattern = "^(\\d+\\..*)"

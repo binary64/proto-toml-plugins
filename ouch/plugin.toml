@@ -25,4 +25,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/ouch-org/ouch"
-version-pattern = "^[0-9]"
+version-pattern = "^(\\d+\\..*)"
