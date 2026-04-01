@@ -22,4 +22,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/Wilfred/difftastic"
-version-pattern = "^(\\d+\\..*)"
+version-pattern = "^(\\d+\\.\\d+\\.\\d+)"
