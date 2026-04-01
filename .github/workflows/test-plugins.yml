@@ -45,10 +45,8 @@ jobs:
 
       - name: Configure plugin
         run: |
-          cat >> .prototools <<EOF
-          [plugins]
-          ${{ matrix.plugin }} = "source:file://${{ github.workspace }}/${{ matrix.plugin }}/plugin.toml"
-          EOF
+          printf '\n[plugins]\n%s = "source:%s/%s/plugin.toml"\n' \
+            "${{ matrix.plugin }}" "${{ github.workspace }}" "${{ matrix.plugin }}" >> .prototools
           echo "--- .prototools ---"
           cat .prototools
 
