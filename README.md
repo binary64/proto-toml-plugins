@@ -13,7 +13,6 @@ A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 | [ast-grep](ast-grep/) | Structural code search & rewrite | [ast-grep/ast-grep](https://github.com/ast-grep/ast-grep) |
 | [bandwhich](bandwhich/) | Terminal bandwidth utilization monitor | [imsnif/bandwhich](https://github.com/imsnif/bandwhich) |
 | [bat](bat/) | cat clone with syntax highlighting | [sharkdp/bat](https://github.com/sharkdp/bat) |
-| [bitwarden-cli](bitwarden-cli/) | Bitwarden password manager CLI | [bitwarden/cli](https://github.com/bitwarden/cli) |
 | [bottom](bottom/) | Graphical process/system monitor (btm) | [ClementTsang/bottom](https://github.com/ClementTsang/bottom) |
 | [cargo-machete](cargo-machete/) | Remove unused Rust dependencies | [bnjbvr/cargo-machete](https://github.com/bnjbvr/cargo-machete) |
 | [cargo-watch](cargo-watch/) | Watch Cargo projects for changes | [watchexec/cargo-watch](https://github.com/watchexec/cargo-watch) |
