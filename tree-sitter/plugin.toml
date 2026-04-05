@@ -1,0 +1,29 @@
+name = "tree-sitter"
+description = "Incremental parsing library and parser generator CLI"
+
+[platform.linux]
+download-file = "tree-sitter-cli-linux-x64.zip"
+
+[platform.macos]
+download-file = "tree-sitter-cli-macos-{arch}.zip"
+
+[platform.windows]
+download-file = "tree-sitter-cli-windows-x64.zip"
+
+[install]
+download-url = "https://github.com/tree-sitter/tree-sitter/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x64"
+
+[install.exes.tree-sitter]
+primary = true
+
+[resolve]
+git-url = "https://github.com/tree-sitter/tree-sitter"
+strategies = ["git-tag"]
+version-pattern = "^v([0-9]+\\.[0-9]+\\.[0-9]+)$"
+
+[metadata]
+category = "development"
