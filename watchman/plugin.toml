@@ -1,0 +1,29 @@
+name = "watchman"
+description = "File watching service by Facebook"
+
+[platform.linux]
+download-file = "watchman-v{version}-linux.zip"
+
+[platform.macos]
+skip = true
+
+[platform.windows]
+skip = true
+
+[install]
+download-url = "https://github.com/facebook/watchman/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "-"
+x86_64 = "-"
+
+[install.exes.watchman]
+primary = true
+
+[resolve]
+git-url = "https://github.com/facebook/watchman"
+strategies = ["git-tag"]
+version-pattern = "^v([0-9]{4}\\.[0-9]{2}\\.[0-9]{2}\\.[0-9]{2})$"
+
+[metadata]
+category = "development"
