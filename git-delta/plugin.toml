@@ -20,6 +20,9 @@ download-url = "https://github.com/dandavison/delta/releases/download/{version}/
 aarch64 = "aarch64"
 x86_64 = "x86_64"
 
+[install.dir]
+target = ""
+
 [install.exes.delta]
 primary = true
 

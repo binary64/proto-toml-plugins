@@ -24,6 +24,9 @@ checksum-url = "https://github.com/BurntSushi/ripgrep/releases/download/{version
 aarch64 = "aarch64"
 x86_64 = "x86_64"
 
+[install.dir]
+target = ""
+
 [install.exes.rg]
 primary = true
 

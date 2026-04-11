@@ -13,6 +13,9 @@ download-file = "Windows64.zip"
 [install]
 download-url = "https://github.com/VirusTotal/vt-cli/releases/download/{version}/{download_file}"
 
+[install.dir]
+target = ""
+
 [install.exes.vt]
 primary = true
 

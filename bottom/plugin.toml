@@ -17,6 +17,9 @@ download-url = "https://github.com/ClementTsang/bottom/releases/download/{versio
 aarch64 = "aarch64"
 x86_64 = "x86_64"
 
+[install.dir]
+target = ""
+
 [install.exes.btm]
 primary = true
 
