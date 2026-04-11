@@ -1,0 +1,21 @@
+name = "hurl"
+type = "cli"
+
+[platform.linux]
+download-file = "hurl_{version}_linux_amd64.tar.gz"
+
+[platform.macos]
+download-file = "hurl_{version}_macos_amd64.tar.gz"
+
+[platform.windows]
+download-file = "hurl_{version}_windows_amd64.zip"
+
+[install]
+download-url = "https://github.com/fcambus/hurl/releases/download/{version}/{download_file}"
+
+[install.exes.hurl]
+primary = true
+
+[resolve]
+git-url = "https://github.com/fcambus/hurl"
+version-pattern = "^(\\d+\\.\\d+\\.\\d+)"
