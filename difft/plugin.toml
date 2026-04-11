@@ -1,4 +1,4 @@
-name = "difftastic"
+name = "difft"
 type = "cli"
 
 [platform.linux]

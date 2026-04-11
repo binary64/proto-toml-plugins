@@ -1,4 +1,4 @@
-name = "ripgrep-all"
+name = "rga"
 type = "cli"
 
 [platform.linux]

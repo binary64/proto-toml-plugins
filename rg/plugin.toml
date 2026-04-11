@@ -1,4 +1,4 @@
-name = "ripgrep"
+name = "rg"
 type = "cli"
 
 [platform.linux]

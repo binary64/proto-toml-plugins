@@ -1,4 +1,4 @@
-name = "vt-cli"
+name = "vt"
 type = "cli"
 
 [platform.linux]

@@ -1,4 +1,4 @@
-name = "bottom"
+name = "btm"
 type = "cli"
 
 [platform.linux]
@@ -12,7 +12,6 @@ download-file = "bottom_{arch}-pc-windows-msvc.zip"
 
 [install]
 download-url = "https://github.com/ClementTsang/bottom/releases/download/{version}/{download_file}"
-exe = "btm"
 
 [install.arch]
 aarch64 = "aarch64"
