@@ -2,7 +2,7 @@
 
 A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 
-**71 plugins** and counting.
+**70 plugins** and counting.
 
 ## Available Plugins
 
@@ -13,7 +13,7 @@ A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 | [ast-grep](ast-grep/) | Structural code search & rewrite | [ast-grep/ast-grep](https://github.com/ast-grep/ast-grep) |
 | [bandwhich](bandwhich/) | Terminal bandwidth utilization monitor | [imsnif/bandwhich](https://github.com/imsnif/bandwhich) |
 | [bat](bat/) | cat clone with syntax highlighting | [sharkdp/bat](https://github.com/sharkdp/bat) |
-| [bottom](bottom/) | Graphical process/system monitor (btm) | [ClementTsang/bottom](https://github.com/ClementTsang/bottom) |
+| [btm](btm/) | Graphical process/system monitor (bottom) | [ClementTsang/bottom](https://github.com/ClementTsang/bottom) |
 | [cargo-machete](cargo-machete/) | Remove unused Rust dependencies | [bnjbvr/cargo-machete](https://github.com/bnjbvr/cargo-machete) |
 | [cargo-watch](cargo-watch/) | Watch Cargo projects for changes | [watchexec/cargo-watch](https://github.com/watchexec/cargo-watch) |
 | [choose](choose/) | Human-friendly cut alternative | [theryangeary/choose](https://github.com/theryangeary/choose) |
@@ -21,7 +21,8 @@ A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 | [crane](crane/) | Container registry tool | [google/go-containerregistry](https://github.com/google/go-containerregistry) |
 | [ctop](ctop/) | Container metrics & monitoring | [bcicen/ctop](https://github.com/bcicen/ctop) |
 | [dasel](dasel/) | Query & modify data structures (JSON/YAML/TOML/XML) | [TomWright/dasel](https://github.com/TomWright/dasel) |
-| [difftastic](difftastic/) | Structural diff tool | [Wilfred/difftastic](https://github.com/Wilfred/difftastic) |
+| [delta](delta/) | Syntax-highlighting pager for git diffs | [dandavison/delta](https://github.com/dandavison/delta) |
+| [difft](difft/) | Structural diff tool | [Wilfred/difftastic](https://github.com/Wilfred/difftastic) |
 | [dive](dive/) | Docker image layer explorer | [wagoodman/dive](https://github.com/wagoodman/dive) |
 | [doctl](doctl/) | DigitalOcean CLI | [digitalocean/doctl](https://github.com/digitalocean/doctl) |
 | [dust](dust/) | Intuitive disk usage (du alternative) | [bootandy/dust](https://github.com/bootandy/dust) |
@@ -30,8 +31,7 @@ A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 | [feroxbuster](feroxbuster/) | Recursive content discovery tool | [epi052/feroxbuster](https://github.com/epi052/feroxbuster) |
 | [ffuf](ffuf/) | Fast web fuzzer | [ffuf/ffuf](https://github.com/ffuf/ffuf) |
 | [git-cliff](git-cliff/) | Changelog generator from git history | [orhun/git-cliff](https://github.com/orhun/git-cliff) |
-| [git-delta](git-delta/) | Syntax-highlighting pager for git diffs | [dandavison/delta](https://github.com/dandavison/delta) |
-| [glow](glow/) | Markdown renderer for the terminal | [charmbracelet/glow](https://github.com/charmbracelet/glow) |
+| [glow](glow/) | Markdown renderer for terminal | [charmbracelet/glow](https://github.com/charmbracelet/glow) |
 | [gobuster](gobuster/) | Directory/DNS/VHost brute-forcer | [OJ/gobuster](https://github.com/OJ/gobuster) |
 | [grex](grex/) | Regex generator from examples | [pemistahl/grex](https://github.com/pemistahl/grex) |
 | [gron](gron/) | Make JSON greppable | [tomnomnom/gron](https://github.com/tomnomnom/gron) |
@@ -55,13 +55,13 @@ A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 | [newrelic](newrelic/) | New Relic CLI | [newrelic/newrelic-cli](https://github.com/newrelic/newrelic-cli) |
 | [nuclei](nuclei/) | Vulnerability scanner | [projectdiscovery/nuclei](https://github.com/projectdiscovery/nuclei) |
 | [ouch](ouch/) | Compress/decompress files (any format) | [ouch-org/ouch](https://github.com/ouch-org/ouch) |
-| [pastel](pastel/) | Color manipulation in the terminal | [sharkdp/pastel](https://github.com/sharkdp/pastel) |
+| [pastel](pastel/) | Color manipulation in terminal | [sharkdp/pastel](https://github.com/sharkdp/pastel) |
 | [procs](procs/) | Modern ps replacement | [dalance/procs](https://github.com/dalance/procs) |
 | [pulumi](pulumi/) | Pulumi IaC CLI | [pulumi/pulumi](https://github.com/pulumi/pulumi) |
 | [qsv](qsv/) | Ultra-fast CSV toolkit | [jqnatividad/qsv](https://github.com/jqnatividad/qsv) |
 | [rancher](rancher/) | Rancher CLI | [rancher/cli](https://github.com/rancher/cli) |
-| [ripgrep](ripgrep/) | Fast recursive grep (rg) | [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) |
-| [ripgrep-all](ripgrep-all/) | ripgrep over PDFs, archives, and more | [phiresky/ripgrep-all](https://github.com/phiresky/ripgrep-all) |
+| [rg](rg/) | Fast recursive grep (ripgrep) | [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) |
+| [rga](rga/) | ripgrep over PDFs, archives, and more | [phiresky/ripgrep-all](https://github.com/phiresky/ripgrep-all) |
 | [sd](sd/) | Intuitive find & replace (sed alternative) | [chmln/sd](https://github.com/chmln/sd) |
 | [sentry-cli](sentry-cli/) | Sentry error tracking CLI | [getsentry/sentry-cli](https://github.com/getsentry/sentry-cli) |
 | [shfmt](shfmt/) | Shell script formatter | [mvdan/sh](https://github.com/mvdan/sh) |
@@ -73,7 +73,7 @@ A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 | [ubi](ubi/) | Universal binary installer | [houseabsolute/ubi](https://github.com/houseabsolute/ubi) |
 | [usql](usql/) | Universal SQL CLI for any database | [xo/usql](https://github.com/xo/usql) |
 | [vhs](vhs/) | Terminal GIF recorder | [charmbracelet/vhs](https://github.com/charmbracelet/vhs) |
-| [vt-cli](vt-cli/) | VirusTotal CLI | [VirusTotal/vt-cli](https://github.com/VirusTotal/vt-cli) |
+| [vt](vt/) | VirusTotal CLI | [VirusTotal/vt-cli](https://github.com/VirusTotal/vt-cli) |
 | [vultr-cli](vultr-cli/) | Vultr cloud CLI | [vultr/vultr-cli](https://github.com/vultr/vultr-cli) |
 | [webanalyze](webanalyze/) | Website tech stack detection | [rverton/webanalyze](https://github.com/rverton/webanalyze) |
 | [xh](xh/) | Friendly HTTP client (httpie alternative) | [ducaale/xh](https://github.com/ducaale/xh) |
@@ -110,4 +110,3 @@ yq = "4.52.5"
 ## Contributing
 
 Each plugin is a single `plugin.toml` following the [proto TOML plugin schema](https://moonrepo.dev/docs/proto/non-wasm-plugin). PRs welcome for new tools or fixes.
-
