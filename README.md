@@ -79,6 +79,29 @@ A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 | [xh](xh/) | Friendly HTTP client (httpie alternative) | [ducaale/xh](https://github.com/ducaale/xh) |
 | [yq](yq/) | YAML/JSON/XML processor | [mikefarah/yq](https://github.com/mikefarah/yq) |
 
+## Quick Install
+
+Install popular CLI tools in one go:
+
+```bash
+# Add plugins
+proto plugin add bottom https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/bottom/plugin.toml
+proto plugin add difftastic https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/difftastic/plugin.toml
+proto plugin add git-delta https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/git-delta/plugin.toml
+proto plugin add ripgrep https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/ripgrep/plugin.toml
+proto plugin add ripgrep-all https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/ripgrep-all/plugin.toml
+proto plugin add vt-cli https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/vt-cli/plugin.toml
+
+
+# Install tools
+proto install bottom    # runs as 'btm'
+proto install difftastic  # runs as 'difft'
+proto install git-delta  # runs as 'delta'
+proto install ripgrep     # runs as 'rg'
+proto install ripgrep-all # runs as 'rga'
+proto install vt-cli       # runs as 'vt'
+```
+
 ## Usage
 
 Add plugins to your `.prototools` file:
