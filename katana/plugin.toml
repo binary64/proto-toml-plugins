@@ -1,0 +1,21 @@
+name = "katana"
+type = "cli"
+
+[platform.linux]
+download-file = "katana_{version}_linux_amd64.tar.gz"
+
+[platform.macos]
+download-file = "katana_{version}_darwin_amd64.tar.gz"
+
+[platform.windows]
+download-file = "katana_{version}_windows_amd64.zip"
+
+[install]
+download-url = "https://github.com/sensepost/katana/releases/download/{version}/{download_file}"
+
+[install.exes.katana]
+primary = true
+
+[resolve]
+git-url = "https://github.com/sensepost/katana"
+version-pattern = "^(\\d+\\.\\d+\\.\\d+)"
