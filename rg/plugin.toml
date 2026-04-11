@@ -19,7 +19,6 @@ archive-prefix = "ripgrep-{version}-{arch}-pc-windows-msvc"
 [install]
 download-url = "https://github.com/BurntSushi/ripgrep/releases/download/{version}/{download_file}"
 checksum-url = "https://github.com/BurntSushi/ripgrep/releases/download/{version}/{checksum_file}"
-exe = "rg"
 
 [install.arch]
 aarch64 = "aarch64"

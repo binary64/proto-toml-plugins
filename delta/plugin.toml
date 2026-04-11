@@ -15,7 +15,6 @@ archive-prefix = "delta-{version}-{arch}-pc-windows-msvc"
 
 [install]
 download-url = "https://github.com/dandavison/delta/releases/download/{version}/{download_file}"
-exe = "delta"
 
 [install.arch]
 aarch64 = "aarch64"
