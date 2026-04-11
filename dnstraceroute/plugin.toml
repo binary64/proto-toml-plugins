@@ -1,0 +1,21 @@
+name = "dnstraceroute"
+type = "cli"
+
+[platform.linux]
+download-file = "dnstraceroute_{version}_linux_amd64.tar.gz"
+
+[platform.macos]
+download-file = "dnstraceroute_{version}_darwin_amd64.tar.gz"
+
+[platform.windows]
+download-file = "dnstraceroute_{version}_windows_amd64.zip"
+
+[install]
+download-url = "https://github.com/pry0/dnstraceroute/releases/download/{version}/{download_file}"
+
+[install.exes.dnstraceroute]
+primary = true
+
+[resolve]
+git-url = "https://github.com/pry0/dnstraceroute"
+version-pattern = "^(\\d+\\.\\d+\\.\\d+)"
