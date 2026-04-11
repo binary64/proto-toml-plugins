@@ -1,0 +1,24 @@
+name = "httpie"
+type = "cli"
+
+[platform.linux]
+download-file = "httpie_{version}_linux_x86_64.tar.gz"
+
+[platform.macos]
+download-file = "httpie_{version}_mac_os_x86_64.tar.gz"
+
+[platform.windows]
+download-file = "httpie_{version}_windows_x86_64.tar.gz"
+
+[install]
+download-url = "https://github.com/httpie/httpie/releases/download/{version}/{download_file}"
+
+[install.exes.http]
+primary = true
+
+[install.exes.https]
+alias = true
+
+[resolve]
+git-url = "https://github.com/httpie/httpie"
+version-pattern = "^(\\d+\\.\\d+\\.\\d+)"
