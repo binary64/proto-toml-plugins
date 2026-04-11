@@ -12,13 +12,11 @@ download-file = "bottom_{arch}-pc-windows-msvc.zip"
 
 [install]
 download-url = "https://github.com/ClementTsang/bottom/releases/download/{version}/{download_file}"
+exe = "btm"
 
 [install.arch]
 aarch64 = "aarch64"
 x86_64 = "x86_64"
-
-[install.dir]
-target = ""
 
 [install.exes.btm]
 primary = true

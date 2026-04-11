@@ -11,13 +11,11 @@ archive-prefix = "ripgrep_all-v{version}-{arch}-apple-darwin"
 
 [install]
 download-url = "https://github.com/phiresky/ripgrep-all/releases/download/v{version}/{download_file}"
+exe = "rga"
 
 [install.arch]
 aarch64 = "aarch64"
 x86_64 = "x86_64"
-
-[install.dir]
-target = ""
 
 [install.exes.rga]
 primary = true
