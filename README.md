@@ -4,6 +4,30 @@ A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 
 **70 plugins** and counting.
 
+## Quick Install - All Plugins
+
+```bash
+# Install all plugins from this repo
+for plugin_dir in */; do
+  plugin_name=$(basename "$plugin_dir")
+  echo "Adding $plugin_name..."
+  proto plugin add $plugin_name https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/$plugin_name/plugin.toml
+done
+
+for plugin_dir in */; do
+  plugin_name=$(basename "$plugin_dir")
+  echo "Installing $plugin_name..."
+  proto install $plugin_name
+done
+```
+
+Or install specific tools:
+
+```bash
+proto plugin add <name> https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/<name>/plugin.toml
+proto install <name>
+```
+
 ## Available Plugins
 
 | Tool | Description | Source |
