@@ -1,0 +1,21 @@
+name = "subjack"
+type = "cli"
+
+[platform.linux]
+download-file = "subjack_{version}_linux_x86_64.tar.gz"
+
+[platform.macos]
+download-file = "subjack_{version}_darwin_x86_64.tar.gz"
+
+[platform.windows]
+download-file = "subjack_{version}_windows_x86_64.tar.gz"
+
+[install]
+download-url = "https://github.com/haccer/subjack/releases/download/{version}/{download_file}"
+
+[install.exes.subjack]
+primary = true
+
+[resolve]
+git-url = "https://github.com/haccer/subjack"
+version-pattern = "^(\\d+\\.\\d+\\.\\d+)"
