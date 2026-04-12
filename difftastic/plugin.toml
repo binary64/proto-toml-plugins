@@ -18,6 +18,7 @@ aarch64 = "aarch64"
 x86_64 = "x86_64"
 
 [install.exes.difft]
+exe-path = "/mnt/arthur/.proto/tools/difftastic/0.68.0/difft"
 primary = true
 
 [resolve]

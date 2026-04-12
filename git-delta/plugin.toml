@@ -21,6 +21,7 @@ aarch64 = "aarch64"
 x86_64 = "x86_64"
 
 [install.exes.delta]
+exe-path = "/mnt/arthur/.proto/tools/git-delta/0.19.2/delta"
 primary = true
 
 [resolve]

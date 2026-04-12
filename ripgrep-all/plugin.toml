@@ -17,6 +17,7 @@ aarch64 = "aarch64"
 x86_64 = "x86_64"
 
 [install.exes.rga]
+exe-path = "/mnt/arthur/.proto/tools/ripgrep-all/0.10.10/rga"
 primary = true
 
 [install.exes.rga-preproc]
