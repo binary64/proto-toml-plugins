@@ -32,38 +32,42 @@ jobs:
       - name: Test each plugin sequentially
         run: |
           plugins="${{ steps.discover.outputs.plugins }}"
-          
+
+          # Initialize .prototools with all plugins
+          echo "[plugins]" > .prototools
+          for plugin in $plugins; do
+            printf '%s = "source:%s/%s/plugin.toml"\n' \
+              "$plugin" "${{ github.workspace }}" "$plugin" >> .prototools
+          done
+
+          # Test each plugin
           for plugin in $plugins; do
             echo "========================================"
             echo "Testing plugin: $plugin"
             echo "========================================"
-            
-            # Configure plugin
-            printf '\n[plugins]\n%s = "source:%s/%s/plugin.toml"\n' \
-              "$plugin" "${{ github.workspace }}" "$plugin" >> .prototools
-            
+
             echo "--- .prototools ---"
             cat .prototools
-            
+
             # Resolve latest version
             version=$(proto list-remote "$plugin" 2>/dev/null | tail -1)
             echo "Latest version: $version"
-            
+
             # Install plugin
             if ! proto install "$plugin" "$version"; then
               echo "❌ Failed to install $plugin"
               exit 1
             fi
-            
+
             # Verify binary
             if ! proto run "$plugin" -- --version 2>/dev/null; then
               if ! proto run "$plugin" -- version 2>/dev/null; then
                 echo "⚠️ --version not supported for $plugin, but binary exists"
               fi
             fi
-            
+
             echo "✅ $plugin passed"
             echo ""
           done
-          
+
           echo "All plugins tested successfully!"

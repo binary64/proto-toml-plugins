@@ -2,16 +2,16 @@ name = "alterx"
 type = "cli"
 
 [platform.linux]
-download-file = "alterx_{version}_linux_amd64.tar.gz"
+download-file = "alterx_{version}_linux_amd64.zip"
 
 [platform.macos]
-download-file = "alterx_{version}_darwin_amd64.tar.gz"
+download-file = "alterx_{version}_macOS_amd64.zip"
 
 [platform.windows]
 download-file = "alterx_{version}_windows_amd64.zip"
 
 [install]
-download-url = "https://github.com/projectdiscovery/alterx/releases/download/{version}/{download_file}"
+download-url = "https://github.com/projectdiscovery/alterx/releases/download/v{version}/{download_file}"
 
 [install.exes.alterx]
 primary = true
