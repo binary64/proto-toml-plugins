@@ -18,4 +18,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/projectdiscovery/alterx"
-version-pattern = "^(\\d+\\.\\d+\\.\\d+)"
+version-pattern = "^v(\\d+\\.\\d+\\.\\d+)"
