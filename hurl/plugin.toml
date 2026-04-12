@@ -17,5 +17,5 @@ download-url = "https://github.com/fcambus/hurl/releases/download/{version}/{dow
 primary = true
 
 [resolve]
-git-url = "https://github.com/fcambus/hurl"
-version-pattern = "^(\\d+\\.\\d+\\.\\d+)"
+git-url = "https://github.com/carlmjohnson/hurl"
+version-pattern = "^v(\\d+\\.\\d+\\.\\d+)"
