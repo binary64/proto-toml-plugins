@@ -17,5 +17,5 @@ download-url = "https://github.com/carlmjohnson/hurl/releases/download/{version}
 primary = true
 
 [resolve]
-git-url = "https://github.com/carlmjohnson/hurl"
+manifest-url = "https://api.github.com/repos/carlmjohnson/hurl/releases"
 version-pattern = "^v(\\d+\\.\\d+\\.\\d+)"
