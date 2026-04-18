@@ -1,0 +1,21 @@
+name = "naabu"
+type = "cli"
+
+[platform.linux]
+download-file = "naabu_{version}_linux_amd64.zip"
+
+[platform.macos]
+download-file = "naabu_{version}_macOS_amd64.zip"
+
+[platform.windows]
+download-file = "naabu_{version}_windows_amd64.zip"
+
+[install]
+download-url = "https://github.com/projectdiscovery/naabu/releases/download/v{version}/{download_file}"
+
+[install.exes.naabu]
+primary = true
+
+[resolve]
+git-url = "https://github.com/projectdiscovery/naabu"
+version-pattern = "^v(\\d+\\.\\d+\\.\\d+)"
