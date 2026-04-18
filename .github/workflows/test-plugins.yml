@@ -1,4 +1,4 @@
-name: Test Plugins
+name: Daily Checks
 
 on:
   push:
@@ -6,7 +6,8 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: "0 6 * * 1" # Weekly Monday 6am — catch upstream release changes
+    - cron: "0 6 * * *" # Daily at 6am UTC — catch upstream release changes
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
