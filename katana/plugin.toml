@@ -1,0 +1,21 @@
+name = "katana"
+type = "cli"
+
+[platform.linux]
+download-file = "katana_{version}_linux_amd64.zip"
+
+[platform.macos]
+download-file = "katana_{version}_macOS_amd64.zip"
+
+[platform.windows]
+download-file = "katana_{version}_windows_amd64.zip"
+
+[install]
+download-url = "https://github.com/projectdiscovery/katana/releases/download/v{version}/{download_file}"
+
+[install.exes.katana]
+primary = true
+
+[resolve]
+git-url = "https://github.com/projectdiscovery/katana"
+version-pattern = "^v(\\d+\\.\\d+\\.\\d+)"
