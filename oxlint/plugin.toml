@@ -3,12 +3,15 @@ type = "cli"
 
 [platform.linux]
 download-file = "oxlint-{arch}-unknown-linux-gnu.tar.gz"
+exe-path = "oxlint-{arch}-unknown-linux-gnu"
 
 [platform.macos]
 download-file = "oxlint-{arch}-apple-darwin.tar.gz"
+exe-path = "oxlint-{arch}-apple-darwin"
 
 [platform.windows]
 download-file = "oxlint-{arch}-pc-windows-msvc.zip"
+exe-path = "oxlint-{arch}-pc-windows-msvc.exe"
 
 [install]
 download-url = "https://github.com/oxc-project/oxc/releases/download/apps_v{version}/{download_file}"
