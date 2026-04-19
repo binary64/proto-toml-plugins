@@ -2,12 +2,31 @@
 
 A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 
-**70 plugins** and counting.
+**77 plugins** and counting.
 
-## Quick Install - All Plugins
+## Install Every Plugin In One Shot
+
+Drop this into any directory to install all 77 plugins at once:
 
 ```bash
-# Download and run the install script
+# Install ALL 77 plugins in one shot (writes .prototools + installs)
+PLUGINS=(alterx argocd argocd-image-updater ast-grep bandwhich bat bottom cargo-machete cargo-watch choose cntb crane ctop dasel difftastic dive dnsx doctl dust eza fd feroxbuster ffuf git-cliff git-delta glow gobuster grex gron grpcurl gum hadolint harbor hcloud hey htmlq httpx hurl jcli just kargo katana kubectl-argo-rollouts lazydocker lazygit longhornctl miniserve mkcert naabu newrelic nuclei ouch pastel procs pulumi puredns qsv rancher ripgrep ripgrep-all sd sentry-cli shfmt snyk sops subfinder subjack syft telnyx ubi usql vhs vt-cli vultr-cli webanalyze xh yq)
+{
+  echo '[plugins]'
+  for p in "${PLUGINS[@]}"; do
+    echo "$p = \"source:https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/$p/plugin.toml\""
+  done
+} > .prototools
+for p in "${PLUGINS[@]}"; do proto install "$p"; done
+```
+
+> Tip: skip the install loop if you only want the plugins registered — proto installs lazily on first `proto run <tool>`.
+
+## Alternative installers
+
+Or use the included install script:
+
+```bash
 curl -fsSL https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/install.sh -o /tmp/install-proto-plugins.sh
 bash /tmp/install-proto-plugins.sh
 ```
@@ -20,7 +39,7 @@ cd proto-toml-plugins
 bash install.sh
 ```
 
-Or install specific tools:
+Or install a single tool:
 
 ```bash
 proto plugin add <name> https://raw.githubusercontent.com/binary64/proto-toml-plugins/main/<name>/plugin.toml
