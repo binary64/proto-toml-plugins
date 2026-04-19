@@ -1,0 +1,26 @@
+name = "gau"
+type = "cli"
+
+[platform.linux]
+download-file = "gau_{version}_linux_{arch}.tar.gz"
+
+[platform.macos]
+download-file = "gau_{version}_darwin_{arch}.tar.gz"
+
+[platform.windows]
+download-file = "gau_{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/lc/gau/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/lc/gau/releases/download/v{version}/gau_{version}_checksums.txt"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.gau]
+primary = true
+
+[resolve]
+git-url = "https://github.com/lc/gau"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
