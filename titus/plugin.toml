@@ -1,0 +1,26 @@
+name = "titus"
+type = "cli"
+
+[platform.linux]
+download-file = "titus-linux-{arch}"
+
+[platform.macos]
+download-file = "titus-darwin-{arch}"
+
+[platform.windows]
+download-file = "titus-windows-{arch}.exe"
+
+[install]
+download-url = "https://github.com/praetorian-inc/titus/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/praetorian-inc/titus/releases/download/v{version}/checksums.txt"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.titus]
+primary = true
+
+[resolve]
+git-url = "https://github.com/praetorian-inc/titus"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
