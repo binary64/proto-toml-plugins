@@ -24,3 +24,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/phiresky/ripgrep-all"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
