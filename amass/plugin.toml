@@ -1,0 +1,28 @@
+name = "amass"
+type = "cli"
+
+[platform.linux]
+download-file = "amass_linux_{arch}.tar.gz"
+exe-path = "amass_linux_{arch}/amass"
+
+[platform.macos]
+download-file = "amass_darwin_{arch}.tar.gz"
+exe-path = "amass_darwin_{arch}/amass"
+
+[platform.windows]
+download-file = "amass_windows_{arch}.tar.gz"
+exe-path = "amass_windows_{arch}/amass.exe"
+
+[install]
+download-url = "https://github.com/owasp-amass/amass/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.amass]
+primary = true
+
+[resolve]
+git-url = "https://github.com/owasp-amass/amass"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
