@@ -1,0 +1,28 @@
+name = "ruff"
+type = "cli"
+
+[platform.linux]
+download-file = "ruff-{arch}-unknown-linux-gnu.tar.gz"
+archive-prefix = "ruff-{arch}-unknown-linux-gnu"
+
+[platform.macos]
+download-file = "ruff-{arch}-apple-darwin.tar.gz"
+archive-prefix = "ruff-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "ruff-{arch}-pc-windows-msvc.zip"
+
+[install]
+download-url = "https://github.com/astral-sh/ruff/releases/download/{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "aarch64"
+aarch64 = "aarch64"
+
+[install.exes.ruff]
+primary = true
+
+[resolve]
+git-url = "https://github.com/astral-sh/ruff"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
