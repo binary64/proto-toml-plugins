@@ -1,0 +1,31 @@
+name = "uv"
+type = "cli"
+
+[platform.linux]
+download-file = "uv-{arch}-unknown-linux-gnu.tar.gz"
+archive-prefix = "uv-{arch}-unknown-linux-gnu"
+
+[platform.macos]
+download-file = "uv-{arch}-apple-darwin.tar.gz"
+archive-prefix = "uv-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "uv-{arch}-pc-windows-msvc.zip"
+
+[install]
+download-url = "https://github.com/astral-sh/uv/releases/download/{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "aarch64"
+aarch64 = "aarch64"
+
+[install.exes.uv]
+primary = true
+
+[install.exes.uvx]
+exe-path = "uvx"
+
+[resolve]
+git-url = "https://github.com/astral-sh/uv"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
