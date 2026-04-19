@@ -1,0 +1,26 @@
+name = "act"
+type = "cli"
+
+[platform.linux]
+download-file = "act_Linux_{arch}.tar.gz"
+
+[platform.macos]
+download-file = "act_Darwin_{arch}.tar.gz"
+
+[platform.windows]
+download-file = "act_Windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/nektos/act/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "arm64"
+aarch64 = "arm64"
+
+[install.exes.act]
+primary = true
+
+[resolve]
+git-url = "https://github.com/nektos/act"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
