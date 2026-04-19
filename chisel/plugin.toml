@@ -1,0 +1,28 @@
+name = "chisel"
+type = "cli"
+
+[platform.linux]
+download-file = "chisel_{version}_linux_{arch}.gz"
+exe-path = "chisel_{version}_linux_{arch}"
+
+[platform.macos]
+download-file = "chisel_{version}_darwin_{arch}.gz"
+exe-path = "chisel_{version}_darwin_{arch}"
+
+[platform.windows]
+download-file = "chisel_{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/jpillora/chisel/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/jpillora/chisel/releases/download/v{version}/chisel_{version}_checksums.txt"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.chisel]
+primary = true
+
+[resolve]
+git-url = "https://github.com/jpillora/chisel"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
