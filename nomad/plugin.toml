@@ -1,0 +1,26 @@
+name = "nomad"
+type = "cli"
+
+[platform.linux]
+download-file = "nomad_{version}_linux_{arch}.zip"
+
+[platform.macos]
+download-file = "nomad_{version}_darwin_{arch}.zip"
+
+[platform.windows]
+download-file = "nomad_{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://releases.hashicorp.com/nomad/{version}/{download_file}"
+checksum-url = "https://releases.hashicorp.com/nomad/{version}/nomad_{version}_SHA256SUMS"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.nomad]
+primary = true
+
+[resolve]
+git-url = "https://github.com/hashicorp/nomad"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
