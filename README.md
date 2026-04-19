@@ -2,15 +2,15 @@
 
 A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 
-**77 plugins** and counting.
+**78 plugins** and counting.
 
 ## Install Every Plugin In One Shot
 
-Drop this into any directory to install all 77 plugins at once:
+Drop this into any directory to install all 78 plugins at once:
 
 ```bash
-# Install ALL 77 plugins in one shot (writes .prototools + installs)
-PLUGINS=(alterx argocd argocd-image-updater ast-grep bandwhich bat bottom cargo-machete cargo-watch choose cntb crane ctop dasel difftastic dive dnsx doctl dust eza fd feroxbuster ffuf git-cliff git-delta glow gobuster grex gron grpcurl gum hadolint harbor hcloud hey htmlq httpx hurl jcli just kargo katana kubectl-argo-rollouts lazydocker lazygit longhornctl miniserve mkcert naabu newrelic nuclei ouch pastel procs pulumi puredns qsv rancher ripgrep ripgrep-all sd sentry-cli shfmt snyk sops subfinder subjack syft telnyx ubi usql vhs vt-cli vultr-cli webanalyze xh yq)
+# Install ALL 78 plugins in one shot (writes .prototools + installs)
+PLUGINS=(alterx argocd argocd-image-updater ast-grep bandwhich bat bottom cargo-machete cargo-watch choose cntb crane ctop dasel difftastic dive dnsx doctl dust eza fd feroxbuster ffuf git-cliff git-delta glow gobuster grex gron grpcurl gum hadolint harbor hcloud hey htmlq httpx hurl jcli just kargo katana kubectl-argo-rollouts lazydocker lazygit longhornctl miniserve mkcert naabu newrelic nuclei ouch pastel procs pulumi puredns qsv rancher ripgrep ripgrep-all sd sentry-cli shfmt snyk sops subfinder subjack syft telnyx ubi usql vhs vt-cli vultr-cli watchexec webanalyze xh yq)
 {
   echo '[plugins]'
   for p in "${PLUGINS[@]}"; do
@@ -57,7 +57,7 @@ proto install <name>
 | [bat](bat/) | cat clone with syntax highlighting | [sharkdp/bat](https://github.com/sharkdp/bat) |
 | [btm](btm/) | Graphical process/system monitor (bottom) | [ClementTsang/bottom](https://github.com/ClementTsang/bottom) |
 | [cargo-machete](cargo-machete/) | Remove unused Rust dependencies | [bnjbvr/cargo-machete](https://github.com/bnjbvr/cargo-machete) |
-| [cargo-watch](cargo-watch/) | Watch Cargo projects for changes | [watchexec/cargo-watch](https://github.com/watchexec/cargo-watch) |
+| [cargo-watch](cargo-watch/) | ⚠️ Archived upstream — see [watchexec](watchexec/) | [watchexec/cargo-watch](https://github.com/watchexec/cargo-watch) |
 | [choose](choose/) | Human-friendly cut alternative | [theryangeary/choose](https://github.com/theryangeary/choose) |
 | [cntb](cntb/) | Contabo cloud CLI | [contabo/cntb](https://github.com/contabo/cntb) |
 | [crane](crane/) | Container registry tool | [google/go-containerregistry](https://github.com/google/go-containerregistry) |
@@ -117,6 +117,7 @@ proto install <name>
 | [vhs](vhs/) | Terminal GIF recorder | [charmbracelet/vhs](https://github.com/charmbracelet/vhs) |
 | [vt](vt/) | VirusTotal CLI | [VirusTotal/vt-cli](https://github.com/VirusTotal/vt-cli) |
 | [vultr-cli](vultr-cli/) | Vultr cloud CLI | [vultr/vultr-cli](https://github.com/vultr/vultr-cli) |
+| [watchexec](watchexec/) | Language-agnostic file watcher (cargo-watch's engine) | [watchexec/watchexec](https://github.com/watchexec/watchexec) |
 | [webanalyze](webanalyze/) | Website tech stack detection | [rverton/webanalyze](https://github.com/rverton/webanalyze) |
 | [xh](xh/) | Friendly HTTP client (httpie alternative) | [ducaale/xh](https://github.com/ducaale/xh) |
 | [yq](yq/) | YAML/JSON/XML processor | [mikefarah/yq](https://github.com/mikefarah/yq) |
