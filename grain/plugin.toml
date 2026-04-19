@@ -1,0 +1,21 @@
+name = "grain"
+type = "cli"
+
+[platform.linux]
+download-file = "grain-linux-x64"
+
+[platform.macos]
+download-file = "grain-mac-x64"
+
+[platform.windows]
+download-file = "grain-win-x64.exe"
+
+[install]
+download-url = "https://github.com/grain-lang/grain/releases/download/grain-v{version}/{download_file}"
+
+[install.exes.grain]
+primary = true
+
+[resolve]
+git-url = "https://github.com/grain-lang/grain"
+version-pattern = '^grain-v(\d+\.\d+\.\d+)$'
