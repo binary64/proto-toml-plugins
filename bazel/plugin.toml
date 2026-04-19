@@ -1,0 +1,26 @@
+name = "bazel"
+type = "cli"
+
+[platform.linux]
+download-file = "bazel-{version}-linux-{arch}"
+
+[platform.macos]
+download-file = "bazel-{version}-darwin-{arch}"
+
+[platform.windows]
+download-file = "bazel-{version}-windows-{arch}.exe"
+
+[install]
+download-url = "https://github.com/bazelbuild/bazel/releases/download/{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "arm64"
+aarch64 = "arm64"
+
+[install.exes.bazel]
+primary = true
+
+[resolve]
+git-url = "https://github.com/bazelbuild/bazel"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
