@@ -1,0 +1,25 @@
+name = "kube-linter"
+type = "cli"
+
+[platform.linux]
+download-file = "kube-linter-linux{arch}.tar.gz"
+
+[platform.macos]
+download-file = "kube-linter-darwin{arch}.tar.gz"
+
+[platform.windows]
+download-file = "kube-linter-windows{arch}.tar.gz"
+
+[install]
+download-url = "https://github.com/stackrox/kube-linter/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "_arm64"
+x86_64 = ""
+
+[install.exes.kube-linter]
+primary = true
+
+[resolve]
+git-url = "https://github.com/stackrox/kube-linter"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
