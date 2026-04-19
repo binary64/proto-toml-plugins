@@ -1,0 +1,25 @@
+name = "kiterunner"
+type = "cli"
+
+[platform.linux]
+download-file = "kiterunner_{version}_linux_{arch}.tar.gz"
+exe-path = "kr"
+
+[platform.macos]
+download-file = "kiterunner_{version}_darwin_{arch}.tar.gz"
+exe-path = "kr"
+
+[install]
+download-url = "https://github.com/assetnote/kiterunner/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/assetnote/kiterunner/releases/download/v{version}/kiterunner_{version}_checksums.txt"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.kr]
+primary = true
+
+[resolve]
+git-url = "https://github.com/assetnote/kiterunner"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
