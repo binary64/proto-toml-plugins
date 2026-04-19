@@ -1,0 +1,25 @@
+name = "interactsh-client"
+type = "cli"
+
+[platform.linux]
+download-file = "interactsh-client_{version}_linux_{arch}.zip"
+
+[platform.macos]
+download-file = "interactsh-client_{version}_macOS_{arch}.zip"
+
+[platform.windows]
+download-file = "interactsh-client_{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/projectdiscovery/interactsh/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.interactsh-client]
+primary = true
+
+[resolve]
+git-url = "https://github.com/projectdiscovery/interactsh"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
