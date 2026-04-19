@@ -1,0 +1,28 @@
+name = "shellcheck"
+type = "cli"
+
+[platform.linux]
+download-file = "shellcheck-v{version}.linux.{arch}.tar.gz"
+archive-prefix = "shellcheck-v{version}"
+
+[platform.macos]
+download-file = "shellcheck-v{version}.darwin.{arch}.tar.gz"
+archive-prefix = "shellcheck-v{version}"
+
+[platform.windows]
+download-file = "shellcheck-v{version}.zip"
+
+[install]
+download-url = "https://github.com/koalaman/shellcheck/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "aarch64"
+aarch64 = "aarch64"
+
+[install.exes.shellcheck]
+primary = true
+
+[resolve]
+git-url = "https://github.com/koalaman/shellcheck"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
