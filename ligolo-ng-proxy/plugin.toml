@@ -1,0 +1,27 @@
+name = "ligolo-ng-proxy"
+type = "cli"
+
+[platform.linux]
+download-file = "ligolo-ng_proxy_{version}_linux_{arch}.tar.gz"
+
+[platform.macos]
+download-file = "ligolo-ng_proxy_{version}_darwin_{arch}.tar.gz"
+
+[platform.windows]
+download-file = "ligolo-ng_proxy_{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/nicocha30/ligolo-ng/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/nicocha30/ligolo-ng/releases/download/v{version}/ligolo-ng_{version}_checksums.txt"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.proxy]
+exe-path = "proxy"
+primary = true
+
+[resolve]
+git-url = "https://github.com/nicocha30/ligolo-ng"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
