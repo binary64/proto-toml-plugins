@@ -1,0 +1,14 @@
+name: Daily Checks
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # Daily at 6am UTC — catch upstream release changes
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  test-plugins:
+    uses: ./.github/workflows/_test-plugins.yml

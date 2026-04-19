@@ -1,0 +1,15 @@
+name: PR Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-plugins:
+    uses: ./.github/workflows/_test-plugins.yml

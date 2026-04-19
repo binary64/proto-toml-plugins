@@ -1,17 +1,7 @@
-name: Daily Checks
+name: Test Plugins (reusable)
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  schedule:
-    - cron: "0 6 * * *" # Daily at 6am UTC — catch upstream release changes
-  workflow_dispatch:
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  workflow_call:
 
 jobs:
   discover:
@@ -62,8 +52,7 @@ jobs:
           echo "latest=$latest" >> "$GITHUB_OUTPUT"
           echo "Latest tag-derived version: $latest"
 
-      # Test 2 (NEW): resolve `latest` end-to-end — this catches missing version-pattern
-      # for v-prefixed upstream tags, which proto::resolve::unresolved_version on real use.
+      # Test 2: resolve `latest` end-to-end — catches missing/loose version-pattern
       - name: Install (resolve latest, no pinned version)
         run: |
           set -euo pipefail
