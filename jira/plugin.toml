@@ -1,0 +1,30 @@
+name = "jira"
+type = "cli"
+
+[platform.linux]
+download-file = "jira_{version}_linux_{arch}.tar.gz"
+archive-prefix = "jira_{version}_linux_{arch}"
+
+[platform.macos]
+download-file = "jira_{version}_macOS_{arch}.tar.gz"
+archive-prefix = "jira_{version}_macOS_{arch}"
+
+[platform.windows]
+download-file = "jira_{version}_windows_{arch}.zip"
+archive-prefix = "jira_{version}_windows_{arch}"
+
+[install]
+download-url = "https://github.com/ankitpokhrel/jira-cli/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "arm64"
+aarch64 = "arm64"
+
+[install.exes.jira]
+exe-path = "bin/jira"
+primary = true
+
+[resolve]
+git-url = "https://github.com/ankitpokhrel/jira-cli"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
