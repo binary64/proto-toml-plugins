@@ -1,0 +1,19 @@
+name = "puredns"
+type = "cli"
+
+[platform.linux]
+download-file = "puredns-Linux-{arch}.tgz"
+
+[platform.macos]
+download-file = "puredns-macOS-{arch}.tgz"
+
+[install]
+download-url = "https://github.com/d3mondev/puredns/releases/download/v{version}/{download_file}"
+arch = { x86_64 = "amd64", arm64 = "arm64", aarch64 = "arm64" }
+
+[install.exes.puredns]
+primary = true
+
+[resolve]
+git-url = "https://github.com/d3mondev/puredns"
+version-pattern = "^v(\\d+\\.\\d+\\.\\d+)"
