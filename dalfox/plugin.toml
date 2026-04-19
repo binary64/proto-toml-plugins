@@ -1,0 +1,28 @@
+name = "dalfox"
+type = "cli"
+
+[platform.linux]
+download-file = "dalfox-linux-{arch}.tar.gz"
+exe-path = "dalfox-linux-{arch}"
+
+[platform.macos]
+download-file = "dalfox-darwin-{arch}.tar.gz"
+exe-path = "dalfox-darwin-{arch}"
+
+[platform.windows]
+download-file = "dalfox-windows-{arch}.zip"
+exe-path = "dalfox-windows-{arch}.exe"
+
+[install]
+download-url = "https://github.com/hahwul/dalfox/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.dalfox]
+primary = true
+
+[resolve]
+git-url = "https://github.com/hahwul/dalfox"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
