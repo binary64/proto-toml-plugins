@@ -1,0 +1,26 @@
+name = "task"
+type = "cli"
+
+[platform.linux]
+download-file = "task_linux_{arch}.tar.gz"
+
+[platform.macos]
+download-file = "task_darwin_{arch}.tar.gz"
+
+[platform.windows]
+download-file = "task_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/go-task/task/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "amd64"
+arm64 = "arm64"
+aarch64 = "arm64"
+
+[install.exes.task]
+primary = true
+
+[resolve]
+git-url = "https://github.com/go-task/task"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
