@@ -28,3 +28,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/orhun/git-cliff"
+version-pattern = '^v(\d+\.\d+\.\d+)$'

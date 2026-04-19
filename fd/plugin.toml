@@ -25,3 +25,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/sharkdp/fd"
+version-pattern = '^v(\d+\.\d+\.\d+)$'

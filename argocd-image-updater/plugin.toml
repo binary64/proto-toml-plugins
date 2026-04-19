@@ -26,3 +26,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/argoproj-labs/argocd-image-updater"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
