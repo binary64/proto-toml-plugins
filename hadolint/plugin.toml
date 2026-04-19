@@ -22,3 +22,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/hadolint/hadolint"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
