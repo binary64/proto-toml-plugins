@@ -1,0 +1,25 @@
+name = "git-sizer"
+type = "cli"
+
+[platform.linux]
+download-file = "git-sizer-{version}-linux-{arch}.zip"
+
+[platform.macos]
+download-file = "git-sizer-{version}-darwin-{arch}.zip"
+
+[platform.windows]
+download-file = "git-sizer-{version}-windows-{arch}.zip"
+
+[install]
+download-url = "https://github.com/github/git-sizer/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.git-sizer]
+primary = true
+
+[resolve]
+git-url = "https://github.com/github/git-sizer"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
