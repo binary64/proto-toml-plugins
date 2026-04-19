@@ -1,0 +1,26 @@
+name = "osv-scanner"
+type = "cli"
+
+[platform.linux]
+download-file = "osv-scanner_linux_{arch}"
+
+[platform.macos]
+download-file = "osv-scanner_darwin_{arch}"
+
+[platform.windows]
+download-file = "osv-scanner_windows_{arch}.exe"
+
+[install]
+download-url = "https://github.com/google/osv-scanner/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/google/osv-scanner/releases/download/v{version}/osv-scanner_SHA256SUMS"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.osv-scanner]
+primary = true
+
+[resolve]
+git-url = "https://github.com/google/osv-scanner"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
