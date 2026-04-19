@@ -1,0 +1,26 @@
+name = "rattler-build"
+type = "cli"
+
+[platform.linux]
+download-file = "rattler-build-{arch}-unknown-linux-musl.tar.gz"
+
+[platform.macos]
+download-file = "rattler-build-{arch}-apple-darwin.tar.gz"
+
+[platform.windows]
+download-file = "rattler-build-{arch}-pc-windows-msvc.zip"
+
+[install]
+download-url = "https://github.com/prefix-dev/rattler-build/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "aarch64"
+aarch64 = "aarch64"
+
+[install.exes.rattler-build]
+primary = true
+
+[resolve]
+git-url = "https://github.com/prefix-dev/rattler-build"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
