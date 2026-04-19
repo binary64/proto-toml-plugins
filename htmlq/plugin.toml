@@ -18,3 +18,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/mgdm/htmlq"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
