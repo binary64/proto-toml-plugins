@@ -1,0 +1,26 @@
+name = "uncover"
+type = "cli"
+
+[platform.linux]
+download-file = "uncover_{version}_linux_{arch}.zip"
+
+[platform.macos]
+download-file = "uncover_{version}_macOS_{arch}.zip"
+
+[platform.windows]
+download-file = "uncover_{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/projectdiscovery/uncover/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/projectdiscovery/uncover/releases/download/v{version}/uncover_{version}_checksums.txt"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.uncover]
+primary = true
+
+[resolve]
+git-url = "https://github.com/projectdiscovery/uncover"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
