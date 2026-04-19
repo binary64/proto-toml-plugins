@@ -1,0 +1,26 @@
+name = "mage"
+type = "cli"
+
+[platform.linux]
+download-file = "mage_{version}_Linux-{arch}.tar.gz"
+
+[platform.macos]
+download-file = "mage_{version}_macOS-{arch}.tar.gz"
+
+[platform.windows]
+download-file = "mage_{version}_Windows-{arch}.zip"
+
+[install]
+download-url = "https://github.com/magefile/mage/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "64bit"
+arm64 = "ARM64"
+aarch64 = "ARM64"
+
+[install.exes.mage]
+primary = true
+
+[resolve]
+git-url = "https://github.com/magefile/mage"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
