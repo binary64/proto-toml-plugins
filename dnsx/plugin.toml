@@ -1,0 +1,21 @@
+name = "dnsx"
+type = "cli"
+
+[platform.linux]
+download-file = "dnsx_{version}_linux_amd64.zip"
+
+[platform.macos]
+download-file = "dnsx_{version}_macOS_amd64.zip"
+
+[platform.windows]
+download-file = "dnsx_{version}_windows_amd64.zip"
+
+[install]
+download-url = "https://github.com/projectdiscovery/dnsx/releases/download/v{version}/{download_file}"
+
+[install.exes.dnsx]
+primary = true
+
+[resolve]
+git-url = "https://github.com/projectdiscovery/dnsx"
+version-pattern = "^v(\\d+\\.\\d+\\.\\d+)"
