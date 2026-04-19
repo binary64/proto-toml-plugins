@@ -1,0 +1,26 @@
+name = "atmos"
+type = "cli"
+
+[platform.linux]
+download-file = "atmos_{version}_linux_{arch}"
+
+[platform.macos]
+download-file = "atmos_{version}_darwin_{arch}"
+
+[platform.windows]
+download-file = "atmos_{version}_windows_{arch}.exe"
+
+[install]
+download-url = "https://github.com/cloudposse/atmos/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "amd64"
+arm64 = "arm64"
+aarch64 = "arm64"
+
+[install.exes.atmos]
+primary = true
+
+[resolve]
+git-url = "https://github.com/cloudposse/atmos"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
