@@ -1,0 +1,23 @@
+name = "dockle"
+type = "cli"
+
+[platform.linux]
+download-file = "dockle_{version}_Linux-{arch}.tar.gz"
+
+[platform.macos]
+download-file = "dockle_{version}_macOS-{arch}.tar.gz"
+
+[install]
+download-url = "https://github.com/goodwithtech/dockle/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/goodwithtech/dockle/releases/download/v{version}/dockle_{version}_checksums.txt"
+
+[install.arch]
+aarch64 = "ARM64"
+x86_64 = "64bit"
+
+[install.exes.dockle]
+primary = true
+
+[resolve]
+git-url = "https://github.com/goodwithtech/dockle"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
