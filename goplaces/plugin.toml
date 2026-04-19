@@ -1,0 +1,26 @@
+name = "goplaces"
+type = "cli"
+
+[platform.linux]
+download-file = "goplaces_{version}_linux_{arch}.tar.gz"
+
+[platform.macos]
+download-file = "goplaces_{version}_darwin_{arch}.tar.gz"
+
+[platform.windows]
+download-file = "goplaces_{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/steipete/goplaces/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/steipete/goplaces/releases/download/v{version}/goplaces_checksums.txt"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.goplaces]
+primary = true
+
+[resolve]
+git-url = "https://github.com/steipete/goplaces"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
