@@ -1,0 +1,29 @@
+name = "pact_verifier_cli"
+type = "cli"
+
+[platform.linux]
+download-file = "pact-verifier-linux-{arch}.gz"
+
+[platform.macos]
+download-file = "pact-verifier-macos-{arch}.gz"
+
+[platform.windows]
+download-file = "pact-verifier-windows-{arch}.exe.gz"
+
+[install]
+download-url = "https://github.com/pact-foundation/pact-reference/releases/download/pact_verifier_cli-v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "aarch64"
+aarch64 = "aarch64"
+
+[install.exes.pact_verifier_cli]
+exe-path = "pact-verifier-linux-{arch}"
+windows-exe-path = "pact-verifier-windows-{arch}.exe"
+macos-exe-path = "pact-verifier-macos-{arch}"
+primary = true
+
+[resolve]
+git-url = "https://github.com/pact-foundation/pact-reference"
+version-pattern = '^pact_verifier_cli-v(\d+\.\d+\.\d+)$'
