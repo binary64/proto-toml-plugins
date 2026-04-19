@@ -1,0 +1,26 @@
+name = "s5cmd"
+type = "cli"
+
+[platform.linux]
+download-file = "s5cmd_{version}_Linux-{arch}.tar.gz"
+
+[platform.macos]
+download-file = "s5cmd_{version}_macOS-{arch}.tar.gz"
+
+[platform.windows]
+download-file = "s5cmd_{version}_Windows-{arch}.zip"
+
+[install]
+download-url = "https://github.com/peak/s5cmd/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/peak/s5cmd/releases/download/v{version}/s5cmd_checksums.txt"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "64bit"
+
+[install.exes.s5cmd]
+primary = true
+
+[resolve]
+git-url = "https://github.com/peak/s5cmd"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
