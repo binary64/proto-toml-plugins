@@ -1,0 +1,26 @@
+name = "flyctl"
+type = "cli"
+
+[platform.linux]
+download-file = "flyctl_{version}_Linux_{arch}.tar.gz"
+
+[platform.macos]
+download-file = "flyctl_{version}_macOS_{arch}.tar.gz"
+
+[platform.windows]
+download-file = "flyctl_{version}_Windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/superfly/flyctl/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "arm64"
+aarch64 = "arm64"
+
+[install.exes.flyctl]
+primary = true
+
+[resolve]
+git-url = "https://github.com/superfly/flyctl"
+version-pattern = '^v(0\.\d+\.\d+)$'
