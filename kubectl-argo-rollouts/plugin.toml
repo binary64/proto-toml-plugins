@@ -26,3 +26,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/argoproj/argo-rollouts"
+version-pattern = '^v(\d+\.\d+\.\d+)$'

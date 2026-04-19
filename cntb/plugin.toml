@@ -26,3 +26,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/contabo/cntb"
+version-pattern = '^v(\d+\.\d+\.\d+)$'

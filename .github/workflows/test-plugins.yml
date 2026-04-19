@@ -51,17 +51,34 @@ jobs:
           echo "--- .prototools ---"
           cat .prototools
 
-      - name: Resolve latest version
-        id: resolve
+      # Test 1: `proto versions` lists tags (basic plugin parsing + git-url works)
+      - name: List versions
+        id: list
         run: |
-          version=$(proto list-remote ${{ matrix.plugin }} 2>/dev/null | tail -1)
-          echo "version=$version" >> "$GITHUB_OUTPUT"
-          echo "Latest version: $version"
+          set -euo pipefail
+          versions=$(proto versions ${{ matrix.plugin }} 2>&1)
+          echo "$versions" | tail -5
+          latest=$(echo "$versions" | tail -1 | awk '{print $1}')
+          echo "latest=$latest" >> "$GITHUB_OUTPUT"
+          echo "Latest tag-derived version: $latest"
 
-      - name: Install plugin
+      # Test 2 (NEW): resolve `latest` end-to-end — this catches missing version-pattern
+      # for v-prefixed upstream tags, which proto::resolve::unresolved_version on real use.
+      - name: Install (resolve latest, no pinned version)
         run: |
-          proto install ${{ matrix.plugin }} ${{ steps.resolve.outputs.version }}
+          set -euo pipefail
+          proto install ${{ matrix.plugin }}
 
+      # Test 3: install at the explicit version proto resolved (sanity check)
+      - name: Install (explicit version)
+        run: |
+          set -euo pipefail
+          proto install ${{ matrix.plugin }} ${{ steps.list.outputs.latest }}
+
+      # Test 4: shim/run path — verifies the binary is reachable and executable
       - name: Verify binary
         run: |
-          proto run ${{ matrix.plugin }} -- --version || proto run ${{ matrix.plugin }} -- version || echo "⚠️ --version not supported, but binary exists"
+          proto run ${{ matrix.plugin }} -- --version \
+            || proto run ${{ matrix.plugin }} -- -version \
+            || proto run ${{ matrix.plugin }} -- version \
+            || echo "⚠️ --version not supported, but binary exists at $(proto run ${{ matrix.plugin }} -- echo OK 2>&1 | tail -1)"

@@ -23,3 +23,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/goharbor/harbor-cli"
+version-pattern = '^v(\d+\.\d+\.\d+)$'

@@ -25,3 +25,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/wagoodman/dive"
+version-pattern = '^v(\d+\.\d+\.\d+)$'

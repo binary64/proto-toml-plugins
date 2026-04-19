@@ -25,3 +25,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/xo/usql"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
