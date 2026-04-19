@@ -1,0 +1,30 @@
+name = "stripe-cli"
+type = "cli"
+
+[platform.linux]
+download-file = "stripe_{version}_linux_{arch}.tar.gz"
+checksum-file = "stripe-linux-checksums.txt"
+
+[platform.macos]
+download-file = "stripe_{version}_mac-os_{arch}.tar.gz"
+checksum-file = "stripe-mac-checksums.txt"
+
+[platform.windows]
+download-file = "stripe_{version}_windows_{arch}.zip"
+checksum-file = "stripe-windows-checksums.txt"
+
+[install]
+download-url = "https://github.com/stripe/stripe-cli/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/stripe/stripe-cli/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "x86_64"
+
+[install.exes.stripe]
+exe-path = "stripe"
+primary = true
+
+[resolve]
+git-url = "https://github.com/stripe/stripe-cli"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
