@@ -1,0 +1,26 @@
+name = "gitleaks"
+type = "cli"
+
+[platform.linux]
+download-file = "gitleaks_{version}_linux_{arch}.tar.gz"
+
+[platform.macos]
+download-file = "gitleaks_{version}_darwin_{arch}.tar.gz"
+
+[platform.windows]
+download-file = "gitleaks_{version}_windows_{arch}.zip"
+
+[install]
+download-url = "https://github.com/gitleaks/gitleaks/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x64"
+arm64 = "arm64"
+aarch64 = "arm64"
+
+[install.exes.gitleaks]
+primary = true
+
+[resolve]
+git-url = "https://github.com/gitleaks/gitleaks"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
