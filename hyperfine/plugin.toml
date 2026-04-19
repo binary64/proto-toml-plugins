@@ -1,0 +1,29 @@
+name = "hyperfine"
+type = "cli"
+
+[platform.linux]
+download-file = "hyperfine-v{version}-{arch}-unknown-linux-gnu.tar.gz"
+archive-prefix = "hyperfine-v{version}-{arch}-unknown-linux-gnu"
+
+[platform.macos]
+download-file = "hyperfine-v{version}-{arch}-apple-darwin.tar.gz"
+archive-prefix = "hyperfine-v{version}-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "hyperfine-v{version}-{arch}-pc-windows-msvc.zip"
+archive-prefix = "hyperfine-v{version}-{arch}-pc-windows-msvc"
+
+[install]
+download-url = "https://github.com/sharkdp/hyperfine/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "aarch64"
+aarch64 = "aarch64"
+
+[install.exes.hyperfine]
+primary = true
+
+[resolve]
+git-url = "https://github.com/sharkdp/hyperfine"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
