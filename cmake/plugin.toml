@@ -1,0 +1,30 @@
+name = "cmake"
+type = "cli"
+
+[platform.linux]
+download-file = "cmake-{version}-linux-{arch}.tar.gz"
+archive-prefix = "cmake-{version}-linux-{arch}"
+
+[platform.macos]
+download-file = "cmake-{version}-macos-universal.tar.gz"
+archive-prefix = "cmake-{version}-macos-universal/CMake.app/Contents"
+
+[platform.windows]
+download-file = "cmake-{version}-windows-{arch}.zip"
+archive-prefix = "cmake-{version}-windows-{arch}"
+
+[install]
+download-url = "https://github.com/Kitware/CMake/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "x86_64"
+arm64 = "aarch64"
+aarch64 = "aarch64"
+
+[install.exes.cmake]
+exe-path = "bin/cmake"
+primary = true
+
+[resolve]
+git-url = "https://github.com/Kitware/CMake"
+version-pattern = '^v?(\d+\.\d+\.\d+)$'
