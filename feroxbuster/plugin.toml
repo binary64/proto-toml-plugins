@@ -22,3 +22,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/epi052/feroxbuster"
+version-pattern = '^v(\d+\.\d+\.\d+)$'

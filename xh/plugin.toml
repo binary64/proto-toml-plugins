@@ -25,3 +25,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/ducaale/xh"
+version-pattern = '^v(\d+\.\d+\.\d+)$'

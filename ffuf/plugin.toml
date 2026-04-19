@@ -26,3 +26,4 @@ primary = true
 
 [resolve]
 git-url = "https://github.com/ffuf/ffuf"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
