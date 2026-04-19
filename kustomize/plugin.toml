@@ -1,0 +1,25 @@
+name = "kustomize"
+type = "cli"
+
+[platform.linux]
+download-file = "kustomize_v{version}_linux_{arch}.tar.gz"
+
+[platform.macos]
+download-file = "kustomize_v{version}_darwin_{arch}.tar.gz"
+
+[platform.windows]
+download-file = "kustomize_v{version}_windows_{arch}.tar.gz"
+
+[install]
+download-url = "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.kustomize]
+primary = true
+
+[resolve]
+git-url = "https://github.com/kubernetes-sigs/kustomize"
+version-pattern = '^kustomize/v(\d+\.\d+\.\d+)$'
