@@ -1,0 +1,29 @@
+name = "local-php-security-checker"
+type = "cli"
+
+[platform.linux]
+download-file = "local-php-security-checker_linux_{arch}"
+checksum-file = "checksums.txt"
+
+[platform.macos]
+download-file = "local-php-security-checker_darwin_{arch}"
+checksum-file = "checksums.txt"
+
+[platform.windows]
+download-file = "local-php-security-checker_windows_{arch}.exe"
+checksum-file = "checksums.txt"
+
+[install]
+download-url = "https://github.com/fabpot/local-php-security-checker/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/fabpot/local-php-security-checker/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.local-php-security-checker]
+primary = true
+
+[resolve]
+git-url = "https://github.com/fabpot/local-php-security-checker"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
