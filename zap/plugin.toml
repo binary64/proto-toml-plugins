@@ -1,0 +1,22 @@
+name = "zap"
+type = "cli"
+
+[platform.linux]
+download-file = "ZAP_{version}_Linux.tar.gz"
+
+[platform.macos]
+download-file = "ZAP_{version}_Crossplatform.zip"
+
+[platform.windows]
+download-file = "ZAP_{version}_Crossplatform.zip"
+
+[install]
+download-url = "https://github.com/zaproxy/zaproxy/releases/download/v{version}/{download_file}"
+
+[install.exes.zap]
+exe-path = "ZAP_{version}/zap.sh"
+primary = true
+
+[resolve]
+git-url = "https://github.com/zaproxy/zaproxy"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
