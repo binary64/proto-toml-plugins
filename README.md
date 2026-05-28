@@ -2,15 +2,15 @@
 
 A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 
-**141 plugins** and counting.
+**145 plugins** and counting.
 
 ## Install Every Plugin In One Shot
 
-Drop this into any directory to install all 141 plugins at once:
+Drop this into any directory to install all 145 plugins at once:
 
 ```bash
-# Install ALL 141 plugins in one shot (writes .prototools + installs)
-PLUGINS=(act actionlint alterx amass argocd argocd-image-updater ast-grep atmos bandwhich bat bazel bearer biome bottom caddy cargo-machete cargo-watch chisel choose cmake cntb cosign crane ctop d2 dagger dalfox dasel difftastic discrawl dive dnsx dockle doctl dprint duckdb dust eza fd feroxbuster ffuf flyctl gau git-cliff git-delta git-sizer gitleaks glow gobuster gog goplaces grain grex gron grpcurl grype gum hadolint harbor hcloud hey htmlq httpx hurl hyperfine interactsh-client jcli jira just k3d kargo katana kiterunner kube-bench kube-linter kubectl-argo-rollouts kustomize lazydocker lazygit ligolo-ng-agent ligolo-ng-proxy longhornctl mage miniserve mkcert naabu newrelic ninja nomad nuclei octopus osv-scanner ouch oxlint packer pact_verifier_cli pastel pixi procs pulumi puredns qsv rancher rattler-build rclone ripgrep ripgrep-all ruff s5cmd sd sentry-cli shellcheck shfmt snyk sops step stripe-cli subfinder subjack syft task telnyx tflint titus tlsx traefik tree-sitter trufflehog ubi uncover usql uv vault vhs vt-cli vultr-cli watchexec webanalyze wizer xh yq)
+# Install ALL 145 plugins in one shot (writes .prototools + installs)
+PLUGINS=(act actionlint alterx amass argocd argocd-image-updater ast-grep atmos bandwhich bat bazel bearer biome bottom caddy cargo-machete cargo-watch chisel choose cmake cntb cosign crane ctop d2 dagger dalfox dasel difftastic discrawl dive dnsx dockle doctl dprint duckdb dust eza fd feroxbuster ffuf flyctl gau git-cliff git-delta git-sizer gitleaks glow gobuster gogcli gog goplaces grain grex gron grpcurl grype gum hadolint harbor hcloud hey htmlq httpx hurl hyperfine interactsh-client jcli jira just k3d kargo katana kiterunner kube-bench kube-linter kubectl-argo-rollouts kustomize lazydocker lazygit local-php-security-checker ligolo-ng-agent ligolo-ng-proxy longhornctl mage miniserve mkcert naabu newrelic ninja nomad nuclei octopus osv-scanner ouch oxlint packer pact_verifier_cli pastel pixi podman-static procs pulumi puredns qsv rancher rattler-build rclone ripgrep ripgrep-all ruff s5cmd sd sentry-cli shellcheck shfmt snyk sops step stripe-cli subfinder subjack syft task telnyx tflint titus tlsx traefik tree-sitter trufflehog ubi uncover usql uv vault vhs vt-cli vultr-cli watchexec webanalyze wizer xh yq zap)
 {
   echo '[plugins]'
   for p in "${PLUGINS[@]}"; do
@@ -100,6 +100,7 @@ Descriptions are pulled directly from each upstream's GitHub `About` bio. *Pushe
 | [git-sizer](git-sizer/) | Compute various size metrics for a Git repository, flagging those that might cause problems | [github/git-sizer](https://github.com/github/git-sizer) | 2026 | 2021 |
 | [gitleaks](gitleaks/) | Find secrets with Gitleaks 🔑 | [gitleaks/gitleaks](https://github.com/gitleaks/gitleaks) | 2026 | 2026 |
 | [glow](glow/) | Render markdown on the CLI, with pizzazz! 💅🏻 | [charmbracelet/glow](https://github.com/charmbracelet/glow) | 2026 | 2026 |
+| [gogcli](gogcli/) | Google Workspace in your terminal | [steipete/gogcli](https://github.com/steipete/gogcli) | 2026 | 2026 |
 | [gobuster](gobuster/) | Directory/File, DNS and VHost busting tool written in Go | [OJ/gobuster](https://github.com/OJ/gobuster) | 2026 | 2025 |
 | [gog](gog/) | Google Suite CLI: Gmail, GCal, GDrive, GContacts | [steipete/gogcli](https://github.com/steipete/gogcli) | 2026 | 2026 |
 | [goplaces](goplaces/) | Modern Google Places CLI in Go | [steipete/goplaces](https://github.com/steipete/goplaces) | 2026 | 2026 |
@@ -131,6 +132,7 @@ Descriptions are pulled directly from each upstream's GitHub `About` bio. *Pushe
 | [kustomize](kustomize/) | Customization of kubernetes YAML configurations | [kubernetes-sigs/kustomize](https://github.com/kubernetes-sigs/kustomize) | 2026 | 2026 |
 | [lazydocker](lazydocker/) | The lazier way to manage everything docker | [jesseduffield/lazydocker](https://github.com/jesseduffield/lazydocker) | 2026 | 2026 |
 | [lazygit](lazygit/) | simple terminal UI for git commands | [jesseduffield/lazygit](https://github.com/jesseduffield/lazygit) | 2026 | 2026 |
+| [local-php-security-checker](local-php-security-checker/) | PHP security vulnerabilities checker | [fabpot/local-php-security-checker](https://github.com/fabpot/local-php-security-checker) | 2024 | 2024 |
 | [ligolo-ng-agent](ligolo-ng-agent/) | An advanced, yet simple, tunneling/pivoting tool that uses a TUN interface | [nicocha30/ligolo-ng](https://github.com/nicocha30/ligolo-ng) | 2026 | 2026 |
 | [ligolo-ng-proxy](ligolo-ng-proxy/) | An advanced, yet simple, tunneling/pivoting tool that uses a TUN interface | [nicocha30/ligolo-ng](https://github.com/nicocha30/ligolo-ng) | 2026 | 2026 |
 | [longhornctl](longhornctl/) | Longhorn CLI is a headless way for preflighting, operating and troubleshooting Longhorn cluster | [longhorn/cli](https://github.com/longhorn/cli) | 2026 | 2026 |
@@ -150,6 +152,7 @@ Descriptions are pulled directly from each upstream's GitHub `About` bio. *Pushe
 | [pact_verifier_cli](pact_verifier_cli/) | Reference implementations for the pact specifications | [pact-foundation/pact-reference](https://github.com/pact-foundation/pact-reference) | 2026 | 2026 |
 | [pastel](pastel/) | A command-line tool to generate, analyze, convert and manipulate colors | [sharkdp/pastel](https://github.com/sharkdp/pastel) | 2026 | 2026 |
 | [pixi](pixi/) | Powerful system-level package manager for Linux, macOS and Windows written in Rust – building on top of the Conda ecosystem | [prefix-dev/pixi](https://github.com/prefix-dev/pixi) | 2026 | 2026 |
+| [podman-static](podman-static/) | Static podman binaries and container image | [mgoltzsche/podman-static](https://github.com/mgoltzsche/podman-static) | 2026 | 2026 |
 | [procs](procs/) | A modern replacement for ps written in Rust | [dalance/procs](https://github.com/dalance/procs) | 2026 | 2026 |
 | [pulumi](pulumi/) | Pulumi - Infrastructure as Code in any programming language 🚀 | [pulumi/pulumi](https://github.com/pulumi/pulumi) | 2026 | 2026 |
 | [puredns](puredns/) | Puredns is a fast domain resolver and subdomain bruteforcing tool that can accurately filter out wildcard subdomains and DNS… | [d3mondev/puredns](https://github.com/d3mondev/puredns) | 2026 | 2023 |
@@ -192,7 +195,8 @@ Descriptions are pulled directly from each upstream's GitHub `About` bio. *Pushe
 | [webanalyze](webanalyze/) | Port of Wappalyzer (uncovers technologies used on websites) to automate mass scanning | [rverton/webanalyze](https://github.com/rverton/webanalyze) | 2026 | 2026 |
 | [wizer](wizer/) | The WebAssembly Pre-Initializer | [bytecodealliance/wizer](https://github.com/bytecodealliance/wizer) | 2026 | 2026 |
 | [xh](xh/) | Friendly and fast tool for sending HTTP requests | [ducaale/xh](https://github.com/ducaale/xh) | 2026 | 2025 |
-| [yq](yq/) | yq is a portable command-line YAML, JSON, XML, CSV, TOML, HCL and properties processor | [mikefarah/yq](https://github.com/mikefarah/yq) | 2026 | 2026 |
+| [yq](yq/) | yq is a portable command-line YAML, JSON, XML, CSV, TOML and properties processor | [mikefarah/yq](https://github.com/mikefarah/yq) | 2026 | 2026 |
+| [zap](zap/) | The ZAP by Checkmarx Core project | [zaproxy/zaproxy](https://github.com/zaproxy/zaproxy) | 2026 | 2026 |
 
 ## Usage
 
