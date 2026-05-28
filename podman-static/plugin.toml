@@ -1,0 +1,32 @@
+name = "podman-static"
+type = "cli"
+
+[platform.linux]
+download-file = "podman-linux-{arch}.tar.gz"
+
+[install]
+download-url = "https://github.com/mgoltzsche/podman-static/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[install.exes.podman]
+exe-path = "podman-linux-{arch}/usr/local/bin/podman"
+primary = true
+
+[install.exes.crun]
+exe-path = "podman-linux-{arch}/usr/local/bin/crun"
+
+[install.exes.runc]
+exe-path = "podman-linux-{arch}/usr/local/bin/runc"
+
+[install.exes.fuse-overlayfs]
+exe-path = "podman-linux-{arch}/usr/local/bin/fuse-overlayfs"
+
+[install.exes.pasta]
+exe-path = "podman-linux-{arch}/usr/local/bin/pasta"
+
+[resolve]
+git-url = "https://github.com/mgoltzsche/podman-static"
+version-pattern = '^v(\d+\.\d+\.\d+)$'
