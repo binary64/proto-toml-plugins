@@ -2,15 +2,15 @@
 
 A collection of [proto](https://moonrepo.dev/proto) TOML plugins for CLI tools.
 
-**145 plugins** and counting.
+**144 plugins** and counting.
 
 ## Install Every Plugin In One Shot
 
-Drop this into any directory to install all 145 plugins at once:
+Drop this into any directory to install all 144 plugins at once:
 
 ```bash
-# Install ALL 145 plugins in one shot (writes .prototools + installs)
-PLUGINS=(act actionlint alterx amass argocd argocd-image-updater ast-grep atmos bandwhich bat bazel bearer biome bottom caddy cargo-machete cargo-watch chisel choose cmake cntb cosign crane ctop d2 dagger dalfox dasel difftastic discrawl dive dnsx dockle doctl dprint duckdb dust eza fd feroxbuster ffuf flyctl gau git-cliff git-delta git-sizer gitleaks glow gobuster gogcli gog goplaces grain grex gron grpcurl grype gum hadolint harbor hcloud hey htmlq httpx hurl hyperfine interactsh-client jcli jira just k3d kargo katana kiterunner kube-bench kube-linter kubectl-argo-rollouts kustomize lazydocker lazygit local-php-security-checker ligolo-ng-agent ligolo-ng-proxy longhornctl mage miniserve mkcert naabu newrelic ninja nomad nuclei octopus osv-scanner ouch oxlint packer pact_verifier_cli pastel pixi podman-static procs pulumi puredns qsv rancher rattler-build rclone ripgrep ripgrep-all ruff s5cmd sd sentry-cli shellcheck shfmt snyk sops step stripe-cli subfinder subjack syft task telnyx tflint titus tlsx traefik tree-sitter trufflehog ubi uncover usql uv vault vhs vt-cli vultr-cli watchexec webanalyze wizer xh yq zap)
+# Install ALL 144 plugins in one shot (writes .prototools + installs)
+PLUGINS=(act actionlint alterx amass argocd argocd-image-updater ast-grep atmos bandwhich bat bazel bearer biome bottom caddy cargo-machete cargo-watch chisel choose cmake cntb cosign crane ctop d2 dagger dalfox dasel difftastic discrawl dive dnsx dockle doctl dprint duckdb dust eza fd feroxbuster ffuf flyctl gau git-cliff git-delta git-sizer gitleaks glow gobuster gog goplaces grain grex gron grpcurl grype gum hadolint harbor hcloud hey htmlq httpx hurl hyperfine interactsh-client jcli jira just k3d kargo katana kiterunner kube-bench kube-linter kubectl-argo-rollouts kustomize lazydocker lazygit local-php-security-checker ligolo-ng-agent ligolo-ng-proxy longhornctl mage miniserve mkcert naabu newrelic ninja nomad nuclei octopus osv-scanner ouch oxlint packer pact_verifier_cli pastel pixi podman-static procs pulumi puredns qsv rancher rattler-build rclone ripgrep ripgrep-all ruff s5cmd sd sentry-cli shellcheck shfmt snyk sops step stripe-cli subfinder subjack syft task telnyx tflint titus tlsx traefik tree-sitter trufflehog ubi uncover usql uv vault vhs vt-cli vultr-cli watchexec webanalyze wizer xh yq zap)
 {
   echo '[plugins]'
   for p in "${PLUGINS[@]}"; do
@@ -100,7 +100,6 @@ Descriptions are pulled directly from each upstream's GitHub `About` bio. *Pushe
 | [git-sizer](git-sizer/) | Compute various size metrics for a Git repository, flagging those that might cause problems | [github/git-sizer](https://github.com/github/git-sizer) | 2026 | 2021 |
 | [gitleaks](gitleaks/) | Find secrets with Gitleaks 🔑 | [gitleaks/gitleaks](https://github.com/gitleaks/gitleaks) | 2026 | 2026 |
 | [glow](glow/) | Render markdown on the CLI, with pizzazz! 💅🏻 | [charmbracelet/glow](https://github.com/charmbracelet/glow) | 2026 | 2026 |
-| [gogcli](gogcli/) | Google Workspace in your terminal | [steipete/gogcli](https://github.com/steipete/gogcli) | 2026 | 2026 |
 | [gobuster](gobuster/) | Directory/File, DNS and VHost busting tool written in Go | [OJ/gobuster](https://github.com/OJ/gobuster) | 2026 | 2025 |
 | [gog](gog/) | Google Suite CLI: Gmail, GCal, GDrive, GContacts | [steipete/gogcli](https://github.com/steipete/gogcli) | 2026 | 2026 |
 | [goplaces](goplaces/) | Modern Google Places CLI in Go | [steipete/goplaces](https://github.com/steipete/goplaces) | 2026 | 2026 |
